@@ -402,6 +402,7 @@
           <e p="GameMaster.cs" t="Include" />
           <e p="IntroSprite.cs" t="Include" />
           <e p="Key.cs" t="Include" />
+          <e p="Laser.cs" t="Include" />
           <e p="LevelLoader.cs" t="Include" />
           <e p="LevelLoader_forMainMenu.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
