@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    private StatusController theStatusController;
+    
     private LineRenderer lr;
     
     [SerializeField] 
     private Transform startPoint;
 
+    //the alarming sound
+    [SerializeField] 
+    private string Alarm_Sound;
+    
     private void Start()
     {
+        theStatusController = FindObjectOfType<StatusController>();
         lr = GetComponent<LineRenderer>();
     }
 
@@ -24,11 +31,14 @@ public class Laser : MonoBehaviour
             if (hit.collider)
             {
                 lr.SetPosition(1, hit.point);
+                
             }
 
             if (hit.transform.tag == "Player")
             {
-                Destroy(hit.transform.gameObject);
+                SoundManager.instance.PlaySE(Alarm_Sound);
+                theStatusController.DecreaseHp(1);
+                //Destroy(hit.transform.gameObject);
             }
         }
         else
