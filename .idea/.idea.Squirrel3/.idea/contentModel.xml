@@ -408,7 +408,6 @@
           <e p="MainMenu.cs" t="Include" />
           <e p="MainMenu_wholeBuilding.cs" t="Include" />
           <e p="messageClose.cs" t="Include" />
-          <e p="MusicManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerPos.cs" t="Include" />
           <e p="Read.cs" t="Include" />
@@ -416,8 +415,13 @@
           <e p="SceneChange2_ending.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="SecMessage.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="TestingAlarmGround.cs" t="Include" />
           <e p="thirdKey.cs" t="Include" />
           <e p="TriggerTest.cs" t="Include" />
+          <e p="UIScripts" t="Include">
+            <e p="StatusController.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
