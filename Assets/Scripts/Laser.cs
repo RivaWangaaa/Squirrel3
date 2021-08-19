@@ -6,16 +6,20 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     private StatusController theStatusController;
-    
-    private LineRenderer lr;
-    
+    private bool isActivated = true;
+    public bool soundActivated = false;
+
+    [SerializeField] 
+    private int damage;
     [SerializeField] 
     private Transform startPoint;
 
     //the alarming sound
     [SerializeField] 
     private string Alarm_Sound;
-    
+
+    private LineRenderer lr;
+
     private void Start()
     {
         theStatusController = FindObjectOfType<StatusController>();
@@ -24,21 +28,35 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
+        
         lr.SetPosition(0, startPoint.position);
+        
+        if (isActivated) 
+            Damage();
+
+        if (soundActivated)
+            SoundManager.instance.PlaySE(Alarm_Sound);
+
+
+    }
+
+    private void Damage()
+    {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.up, out hit))
         {
             if (hit.collider)
             {
                 lr.SetPosition(1, hit.point);
-                
             }
 
             if (hit.transform.tag == "Player")
             {
-                SoundManager.instance.PlaySE(Alarm_Sound);
-                theStatusController.DecreaseHp(1);
-                //Destroy(hit.transform.gameObject);
+                lr.SetPosition(1, hit.point);
+                theStatusController.DecreaseHp(damage);
+                soundActivated = true;
+                lr.enabled = !lr.enabled;
+                isActivated = false;
             }
         }
         else
@@ -47,4 +65,5 @@ public class Laser : MonoBehaviour
             lr.SetPosition(1, transform.up * 5000);
         }
     }
+    
 }

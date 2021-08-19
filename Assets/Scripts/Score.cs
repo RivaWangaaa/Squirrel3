@@ -6,19 +6,19 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 
-{ private int numberCount = 0;
-
+{ 
+    private int numberCount = 0;
+    
+    
     void Start()
     {
-
     }
 
     void Update()
     {
 
     }
-
-
+    
     private void OnTriggerEnter(Collider other)
     {
         
@@ -26,8 +26,8 @@ public class Score : MonoBehaviour
         {
             GameObject smObject = GameObject.Find("GameMaster");
             GameMaster sm = smObject.GetComponent<GameMaster>();
-             
-            
+
+
             if (CompareTag("Score-"))
             {
                 sm.SetScore(sm.GetScore() - 1);
