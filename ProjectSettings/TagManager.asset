@@ -18,6 +18,7 @@ TagManager:
   - Score-
   - Score--
   - Ending
+  - Sculpture
   layers:
   - Default
   - TransparentFX

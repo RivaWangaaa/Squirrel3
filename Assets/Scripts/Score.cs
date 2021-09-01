@@ -8,10 +8,12 @@ public class Score : MonoBehaviour
 
 { 
     private int numberCount = 0;
-    
-    
+    private BreakSculp theBreakSculp;
+
+
     void Start()
     {
+        theBreakSculp = FindObjectOfType<BreakSculp>();
     }
 
     void Update()
@@ -50,6 +52,7 @@ public class Score : MonoBehaviour
                 {
                     sm.SetScore(sm.GetScore() - 1);
                     numberCount++;
+                    theBreakSculp.BreakSculpture();
                 }
 
             }
