@@ -398,6 +398,9 @@
           <e p="CheckPoint.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="EndingSprite.cs" t="Include" />
+          <e p="Environment" t="Include">
+            <e p="BreakSculp.cs" t="Include" />
+          </e>
           <e p="Failed.cs" t="Include" />
           <e p="GameMaster.cs" t="Include" />
           <e p="IntroSprite.cs" t="Include" />
@@ -416,7 +419,10 @@
           <e p="Score.cs" t="Include" />
           <e p="SecMessage.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
-          <e p="TestingAlarmGround.cs" t="Include" />
+          <e p="TestScript" t="Include">
+            <e p="TestFloorBrokeSculp.cs" t="Include" />
+            <e p="TestingAlarmGround.cs" t="Include" />
+          </e>
           <e p="thirdKey.cs" t="Include" />
           <e p="TriggerTest.cs" t="Include" />
           <e p="UIScripts" t="Include">
