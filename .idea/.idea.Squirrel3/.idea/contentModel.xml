@@ -427,6 +427,7 @@
           <e p="TriggerTest.cs" t="Include" />
           <e p="UIScripts" t="Include">
             <e p="StatusController.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
