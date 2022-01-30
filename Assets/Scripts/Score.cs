@@ -6,19 +6,21 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 
-{ private int numberCount = 0;
+{ 
+    private int numberCount = 0;
+    private BreakSculp theBreakSculp;
+
 
     void Start()
     {
-
+        theBreakSculp = FindObjectOfType<BreakSculp>();
     }
 
     void Update()
     {
 
     }
-
-
+    
     private void OnTriggerEnter(Collider other)
     {
         
@@ -26,8 +28,8 @@ public class Score : MonoBehaviour
         {
             GameObject smObject = GameObject.Find("GameMaster");
             GameMaster sm = smObject.GetComponent<GameMaster>();
-             
-            
+
+
             if (CompareTag("Score-"))
             {
                 sm.SetScore(sm.GetScore() - 1);
@@ -50,6 +52,7 @@ public class Score : MonoBehaviour
                 {
                     sm.SetScore(sm.GetScore() - 1);
                     numberCount++;
+                    theBreakSculp.BreakSculpture();
                 }
 
             }
