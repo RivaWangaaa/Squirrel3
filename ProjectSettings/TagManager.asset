@@ -18,6 +18,8 @@ TagManager:
   - Score-
   - Score--
   - Ending
+  - Item
+  - Camera
   layers:
   - Default
   - TransparentFX
