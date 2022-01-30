@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Testing Alarm&amp; Broken sculpture.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Testing Alarm&amp; Broken sculpture.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/Timer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +28,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestingAlarmGround.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/Timer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" />
     </changedPaths>
   </component>
@@ -84,7 +87,8 @@
       <workItem from="1629393765404" duration="2000" />
       <workItem from="1630354678211" duration="2239000" />
       <workItem from="1630444739933" duration="673000" />
-      <workItem from="1642879979989" duration="337000" />
+      <workItem from="1642879979989" duration="1840000" />
+      <workItem from="1643567705625" duration="5262000" />
     </task>
     <servers />
   </component>
