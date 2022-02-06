@@ -5,20 +5,14 @@ using UnityEngine;
 
 public class TestingAlarmGround : MonoBehaviour
 {
-    private Laser theLaser;
+    private Laser[] theLasers;
     private SoundManager theSoundManager;
     
     // Start is called before the first frame update
     void Start()
     {
-        theLaser = FindObjectOfType<Laser>();
+        theLasers = FindObjectsOfType<Laser>();
         theSoundManager = FindObjectOfType<SoundManager>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
@@ -27,7 +21,15 @@ public class TestingAlarmGround : MonoBehaviour
         Debug.Log("트리거");
         if (other.CompareTag("Player"))
         {
-            theLaser.soundActivated = false;
+            if (theLasers != null)
+            {
+                for (int i = 0; i < theLasers.Length; i++)
+                {
+                    theLasers[i].isGround = false;
+                    theLasers[i].soundActivated = false;
+                    theLasers[i].lr.enabled = false;
+                }
+            }
             theSoundManager.StopAllSE();
         }
 

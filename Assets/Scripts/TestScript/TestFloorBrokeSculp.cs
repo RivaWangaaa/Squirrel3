@@ -8,10 +8,26 @@ public class TestFloorBrokeSculp : MonoBehaviour
     
     private int numberCount = 0;
     private BreakSculp theBreakSculp;
+    private Laser[] theLasers;
     [SerializeField] private GameObject[] sculps;
+
+    private void Start()
+    {
+        theLasers = FindObjectsOfType<Laser>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            for (int i = 0; i < theLasers.Length; i++)
+            {
+                theLasers[i].isGround = true;
+                theLasers[i].isActivated = true;
+
+            }
+        }
+        
         if (other.CompareTag("Sculpture"))
         {
             if (sculps != null)

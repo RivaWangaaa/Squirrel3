@@ -6,19 +6,20 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     private StatusController theStatusController;
-    private bool isActivated = true;
+    public bool isActivated = true;
+    
     public bool soundActivated = false;
+    public bool isGround;
 
-    [SerializeField] 
-    private int damage;
-    [SerializeField] 
-    private Transform startPoint;
+
+    [SerializeField] private int damage;
+    [SerializeField] private Transform startPoint;
 
     //the alarming sound
     [SerializeField] 
     private string Alarm_Sound;
 
-    private LineRenderer lr;
+    public LineRenderer lr;
 
     private void Start()
     {
@@ -28,14 +29,16 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
+        if (isGround)
+        {
+            lr.SetPosition(0, startPoint.position);
         
-        lr.SetPosition(0, startPoint.position);
-        
-        if (isActivated) 
-            Damage();
+            if (isActivated) 
+                Damage();
 
-        if (soundActivated)
-            SoundManager.instance.PlaySE(Alarm_Sound);
+            if (soundActivated)
+                SoundManager.instance.PlaySE(Alarm_Sound);
+        }
 
 
     }
