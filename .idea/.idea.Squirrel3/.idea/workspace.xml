@@ -30,9 +30,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Score.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/Timer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestScript/TestingAlarmGround.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tgntJPJpz4RmW2TetyTpdoxKRN" />
@@ -91,6 +91,7 @@
       <workItem from="1642879979989" duration="1840000" />
       <workItem from="1643567705625" duration="6041000" />
       <workItem from="1644086965679" duration="2452000" />
+      <workItem from="1644176631358" duration="2001000" />
     </task>
     <servers />
   </component>

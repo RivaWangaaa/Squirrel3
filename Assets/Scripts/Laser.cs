@@ -31,20 +31,24 @@ public class Laser : MonoBehaviour
     {
         if (isGround)
         {
-            lr.SetPosition(0, startPoint.position);
+            if (!lr.enabled)
+                lr.enabled = true;
+            if (lr.enabled)
+            {
+                lr.SetPosition(0, startPoint.position);
         
-            if (isActivated) 
-                Damage();
+                if (isActivated) 
+                    Damage();
 
-            if (soundActivated)
-                SoundManager.instance.PlaySE(Alarm_Sound);
+                if (soundActivated)
+                    SoundManager.instance.PlaySE(Alarm_Sound);
+            }
         }
-
-
     }
 
     private void Damage()
     {
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.up, out hit))
         {
@@ -66,6 +70,7 @@ public class Laser : MonoBehaviour
         {
             //don't go the laser forever. When this hit -transform.right * 5000 stop it
             lr.SetPosition(1, transform.up * 5000);
+
         }
     }
     

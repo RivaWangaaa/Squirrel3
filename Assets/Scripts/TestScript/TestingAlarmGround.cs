@@ -18,7 +18,6 @@ public class TestingAlarmGround : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("트리거");
         if (other.CompareTag("Player"))
         {
             if (theLasers != null)
@@ -26,6 +25,7 @@ public class TestingAlarmGround : MonoBehaviour
                 for (int i = 0; i < theLasers.Length; i++)
                 {
                     theLasers[i].isGround = false;
+                    theLasers[i].isActivated = false;
                     theLasers[i].soundActivated = false;
                     theLasers[i].lr.enabled = false;
                 }

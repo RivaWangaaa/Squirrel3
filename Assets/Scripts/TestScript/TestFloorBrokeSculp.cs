@@ -24,7 +24,6 @@ public class TestFloorBrokeSculp : MonoBehaviour
             {
                 theLasers[i].isGround = true;
                 theLasers[i].isActivated = true;
-
             }
         }
         
