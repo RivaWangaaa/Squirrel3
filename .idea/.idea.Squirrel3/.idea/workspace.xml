@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Building_Basement.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Laser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestingAlarmGround.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestingAlarmGround.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
       <workItem from="1642879979989" duration="1840000" />
       <workItem from="1643567705625" duration="6041000" />
       <workItem from="1644086965679" duration="2452000" />
-      <workItem from="1644176631358" duration="2001000" />
+      <workItem from="1644176631358" duration="2015000" />
     </task>
     <servers />
   </component>

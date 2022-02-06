@@ -31,8 +31,11 @@ public class Laser : MonoBehaviour
     {
         if (isGround)
         {
-            if (!lr.enabled)
-                lr.enabled = true;
+            if (isActivated)
+            {
+                if (!lr.enabled)
+                    lr.enabled = true;
+            }
             if (lr.enabled)
             {
                 lr.SetPosition(0, startPoint.position);
