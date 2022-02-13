@@ -4,6 +4,8 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [RequireComponent (typeof (CharacterController))]
 public class FirstPersonDrifter: MonoBehaviour
@@ -63,7 +65,12 @@ public class FirstPersonDrifter: MonoBehaviour
         jumpTimer = antiBunnyHopFactor;
     }
  
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
+
+        if (Player.isStop)
+            return;
+        
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
         // If both horizontal and vertical are used simultaneously, limit speed (if allowed), so the total doesn't exceed normal move speed

@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
-{
-    private int numberCount = 0;
+
+{ private int numberCount = 0;
 
     void Start()
     {
@@ -19,36 +19,51 @@ public class Score : MonoBehaviour
     }
 
 
-    
-
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.CompareTag("Player"))
         {
-             GameObject smObject = GameObject.Find("GameMaster");
-             GameMaster sm = smObject.GetComponent<GameMaster>();
-
-             if (this.CompareTag("Score-"))
-             {
-                 sm.SetScore(sm.GetScore() - 1);
-                 Destroy(this.gameObject);
-             }
+            GameObject smObject = GameObject.Find("GameMaster");
+            GameMaster sm = smObject.GetComponent<GameMaster>();
              
-             else if (this.CompareTag("Score--"))
-             {
-                 if (numberCount == 0)
-                 {
-                     sm.SetScore(sm.GetScore() - 1);
-                     numberCount++;
-                 }
+            
+            if (CompareTag("Score-"))
+            {
+                sm.SetScore(sm.GetScore() - 1);
 
-             }
-             else
-             {
-                 sm.SetScore(sm.GetScore() + 1);
-                 Destroy(this.gameObject);
-             }
+                if (sm.thirdSectionActive == 1)
+                {
+                    sm.SetAcorn(gameObject.name);
+                }
+                else if (sm.thirdSectionActive == 3)
+                {
+                    sm.SetAcorn(gameObject.name);
+                }
+                
+                Destroy(gameObject);
+            }
+             
+            else if (CompareTag("Score--"))
+            {
+                if (numberCount == 0)
+                {
+                    sm.SetScore(sm.GetScore() - 1);
+                    numberCount++;
+                }
+
+            }
+            else
+            {
+                sm.SetScore(sm.GetScore() + 1);
+
+                if (sm.thirdSectionActive == 1)
+                {
+                    sm.SetAcorn(gameObject.name);
+                }
+                
+                Destroy(gameObject);
+            }
 
         
 

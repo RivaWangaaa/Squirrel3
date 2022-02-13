@@ -29,13 +29,10 @@ public class thirdKey : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            doorOpen.SetActive(true);
-            doorclosed.SetActive(false);
+
             message1.SetActive(true);
             messageClose.SetActive(true);
-            Debug.Log("충돌!");
-            Destroy(this.gameObject);
-            
+
         }
         
     }

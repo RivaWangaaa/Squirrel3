@@ -2,118 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/3d-model.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/3d-model.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/door_single_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/door_single_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/door_single_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/door_single_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/frame_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/frame_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/frame_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/frame_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/glass_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/glass_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/glass_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/glass_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/props_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/props_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/props_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/props_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/window_frame_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/window_frame_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/window_frame_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/window_frame_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/wire_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/wire_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/wire_mat.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/Materials/wire_mat.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/door_single_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/door_single_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/doors.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/doors.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/double_door_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/double_door_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/double_frame_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/double_frame_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/frame_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/frame_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/props_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/props_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/doors/window_frame_Normal.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/doors/window_frame_Normal.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/sconce_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/sconce_03.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Basement Assets/sconce_03.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Basement Assets/sconce_03.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/PauseMenu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/PauseMenu.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/LockMouse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/LockMouse.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/menuBG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/menuBG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/sliderBG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/sliderBG.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/sliderButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Menu Textures/sliderButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/MouseLook.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/MouseLook.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/HeadBob.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Utils/CameraFade.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/Scripts/Utils/CameraFade.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/VanillaPlayer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/VanillaPlayer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/info.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/info.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/white.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download/First Person Drifter Controller/white.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr 1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr 1.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/TexturesCom_Metal_Corroded_1K_metallic.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/TexturesCom_Metal_Corroded_1K_metallic.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/TexturesCom_Metal_Corroded_1K_normal.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/TexturesCom_Metal_Corroded_1K_normal.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/Yanxi Basement Lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/Yanxi Basement Lighting.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/Yanxi Basement Lighting.lighting.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/17_Basement_mtr/Yanxi Basement Lighting.lighting.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_albedo.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_albedo.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_metallic.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_metallic.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_normal.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/25 Basement_mtr/TexturesCom_Metal_AluminumBrushed_1K_normal.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr 1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr 1.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_albedo.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_albedo.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_metallic.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_metallic.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_normal.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/27 Basement_mtr/TexturesCom_Metal_SteelScratched_1K_normal.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_albedo_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_albedo_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_ao.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_ao.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_height.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_height.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_normal.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/33 Basement_mtr/TexturesCom_Paint_MachineDirty_1K_normal.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/CeilingEmit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/CeilingEmit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/CeilingEmit.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/CeilingEmit.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_AO.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_AO.tga.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_BC.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_BC.tga.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_E.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_E.tga.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_Meta.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_Meta.tga.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_N.tga.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/ExitSign_01/ExitSign_01_N.tga.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/TexturesCom_Metal_Corroded_1K_albedo_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/TexturesCom_Metal_Corroded_1K_albedo_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/TexturesCom_Metal_SteelScratched_1K_metallic.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/TexturesCom_Metal_SteelScratched_1K_metallic.tif.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/WallLightEmit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/WallLightEmit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/WallLightEmit.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/WallLightEmit.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1.FBX.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Diffuse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Diffuse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Glossiness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Glossiness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Height.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Height.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Specular.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/LDS2_01 - Default_Specular.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/lamp_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/lamp_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/lamp_1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/lamp_1/lamp_1.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/LockMouse.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/MouseLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/MouseLook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/MouseLook.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/MouseLook.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraFadeOnStart.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CameraZoom.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/CheckIfBelowLevel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/HeadBob.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Optional/PauseMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Utils/CameraFade.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Utils/CameraFade.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Utils/CameraFade.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/First Person Drifter Controller/Scripts/Utils/CameraFade.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Basement Materials/Basement_mtr 5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Basement Materials/Basement_mtr 5.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGBrush.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGBrush.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGModel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/API/Components/Runtime/CSGNode.cs.meta" afterDir="false" />
@@ -411,19 +319,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerInterface.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerInterface.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerRedirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerRedirector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerRedirector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RealtimeCSG/Runtime/Scripts/Managers/CSGSceneManagerRedirector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/B1_cubes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/B1_cubes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/B1_cubes.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/B1_cubes.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ceiling Objects &amp; Lights.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ceiling Objects &amp; Lights.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ceiling Objects &amp; Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ceiling Objects &amp; Lights.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exit Object &amp; Lights.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exit Object &amp; Lights.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Exit Object &amp; Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Exit Object &amp; Lights.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Post-process Volume.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Post-process Volume.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Post-process Volume.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Post-process Volume.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall Objects &amp; Lights.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall Objects &amp; Lights.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall Objects &amp; Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall Objects &amp; Lights.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1_Profiles/Post-process Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1_Profiles/Post-process Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1_Profiles/Post-process Volume Profile.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement Texture 1_Profiles/Post-process Volume Profile.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement-Ver2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing SCE/Basement Test Scenes/Basement-Ver2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IntroSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IntroSprite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
@@ -431,51 +327,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneChange2_ending.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneChange2_ending.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/thirdKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/thirdKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -502,6 +354,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../02132022BasementSpaceJumpTest\New Unity Project.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\NYU\You Are A Squirrel\02132022BasementSpaceJumpTest" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -534,6 +394,8 @@
       <workItem from="1642887432201" duration="63000" />
       <workItem from="1642887992883" duration="2945000" />
       <workItem from="1643568647651" duration="8090000" />
+      <workItem from="1644777413576" duration="1435000" />
+      <workItem from="1644783129269" duration="623000" />
     </task>
     <servers />
   </component>
