@@ -420,8 +420,8 @@
           <e p="SecMessage.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="TestScript" t="Include">
+            <e p="StopAlarmGround.cs" t="Include" />
             <e p="TestFloorBrokeSculp.cs" t="Include" />
-            <e p="TestingAlarmGround.cs" t="Include" />
           </e>
           <e p="thirdKey.cs" t="Include" />
           <e p="TriggerTest.cs" t="Include" />
