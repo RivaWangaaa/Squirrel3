@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestingAlarmGround : MonoBehaviour
+public class StopAlarmGround : MonoBehaviour
 {
     private Laser[] theLasers;
     private SoundManager theSoundManager;
