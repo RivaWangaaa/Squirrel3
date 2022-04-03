@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +70,7 @@
       <workItem from="1643568647651" duration="8090000" />
       <workItem from="1644777413576" duration="1435000" />
       <workItem from="1644783129269" duration="623000" />
-      <workItem from="1647367489957" duration="641000" />
+      <workItem from="1647367489957" duration="1244000" />
     </task>
     <servers />
   </component>
