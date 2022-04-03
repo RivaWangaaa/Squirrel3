@@ -4,12 +4,16 @@
     <list default="true" id="75b7ddc5-aede-437e-a621-bfb8b051fd12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download Assets/test 3d sculpture.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Download Assets/test 3d sculpture.fbx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Building_Basement.unity" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestingAlarmGround.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TestScript/TestingAlarmGround.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerPos.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerPos.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Read.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,14 +24,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2A3947FE-34A6-499A-A6AB-6B20FE95EBAC/69/2252356d/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractObj.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A92AD44-406B-4318-9677-3A464E9EC96E/d3/d7ba31fb/Action.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestingAlarmGround.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Environment/BreakSculp.cs" />
@@ -37,6 +43,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Laser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestScript/AlarmGround.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TestScript/StopAlarmGround.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collider/Read.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractObj.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tgntJPJpz4RmW2TetyTpdoxKRN" />
@@ -97,7 +108,10 @@
       <workItem from="1644086965679" duration="2452000" />
       <workItem from="1644176631358" duration="2840000" />
       <workItem from="1644777571129" duration="766000" />
-      <workItem from="1645390696388" duration="996000" />
+      <workItem from="1645390696388" duration="1595000" />
+      <workItem from="1645997302974" duration="1587000" />
+      <workItem from="1647367069422" duration="5019000" />
+      <workItem from="1648408875882" duration="9883000" />
     </task>
     <servers />
   </component>

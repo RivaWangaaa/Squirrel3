@@ -87,18 +87,14 @@ public class GameMaster : MonoBehaviour
 
         if (sceneCount == 0)
         {
-            Debug.Log("Acorn name saved : " + saveAcorn.Count);
             PlayerPrefs.SetInt("thirdSection Active", 0);
             thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
         }
 
         else
         {
-            Debug.Log("Acorn name saved : " + saveAcorn.Count);
             thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
         }
-       
-        Debug.Log("thirdSectionActive : " + thirdSectionActive);
         
         if (currentScoreCount == 0)
         {

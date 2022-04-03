@@ -396,6 +396,10 @@
         <e p="Scripts" t="Include">
           <e p="BasementSprite.cs" t="Include" />
           <e p="CheckPoint.cs" t="Include" />
+          <e p="Collider" t="Include">
+            <e p="ColliderEnter.cs" t="Include" />
+            <e p="Read.cs" t="Include" />
+          </e>
           <e p="Door.cs" t="Include" />
           <e p="EndingSprite.cs" t="Include" />
           <e p="Environment" t="Include">
@@ -403,6 +407,7 @@
           </e>
           <e p="Failed.cs" t="Include" />
           <e p="GameMaster.cs" t="Include" />
+          <e p="InteractObj.cs" t="Include" />
           <e p="IntroSprite.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="Laser.cs" t="Include" />
@@ -411,9 +416,10 @@
           <e p="MainMenu.cs" t="Include" />
           <e p="MainMenu_wholeBuilding.cs" t="Include" />
           <e p="messageClose.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
-          <e p="PlayerPos.cs" t="Include" />
-          <e p="Read.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="Player.cs" t="Include" />
+            <e p="PlayerPos.cs" t="Include" />
+          </e>
           <e p="SceneChange.cs" t="Include" />
           <e p="SceneChange2_ending.cs" t="Include" />
           <e p="Score.cs" t="Include" />
