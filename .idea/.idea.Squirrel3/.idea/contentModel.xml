@@ -394,33 +394,28 @@
         </e>
         <e p="readme.txt" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BasementSprite.cs" t="Include" />
           <e p="CheckPoint.cs" t="Include" />
-          <e p="Collider" t="Include">
-            <e p="ColliderEnter.cs" t="Include" />
-            <e p="Read.cs" t="Include" />
-          </e>
           <e p="Door.cs" t="Include" />
           <e p="EndingSprite.cs" t="Include" />
-          <e p="Enemy" t="Include">
-            <e p="EnemyAttack.cs" t="Include" />
-          </e>
           <e p="Environment" t="Include">
             <e p="BreakSculp.cs" t="Include" />
           </e>
           <e p="Failed.cs" t="Include" />
           <e p="GameMaster.cs" t="Include" />
-          <e p="Interaction" t="Include">
-            <e p="InteractObj.cs" t="Include" />
-          </e>
+          <e p="IntroSprite.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="Laser.cs" t="Include" />
           <e p="LevelLoader.cs" t="Include" />
           <e p="LevelLoader_forMainMenu.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MainMenu_wholeBuilding.cs" t="Include" />
           <e p="messageClose.cs" t="Include" />
-          <e p="Player" t="Include">
-            <e p="Player.cs" t="Include" />
-            <e p="PlayerPos.cs" t="Include" />
-          </e>
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerPos.cs" t="Include" />
+          <e p="Read.cs" t="Include" />
+          <e p="SceneChange.cs" t="Include" />
+          <e p="SceneChange2_ending.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="SecMessage.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
@@ -431,12 +426,6 @@
           <e p="thirdKey.cs" t="Include" />
           <e p="TriggerTest.cs" t="Include" />
           <e p="UIScripts" t="Include">
-            <e p="BasementSprite.cs" t="Include" />
-            <e p="IntroSprite.cs" t="Include" />
-            <e p="MainMenu.cs" t="Include" />
-            <e p="MainMenu_wholeBuilding.cs" t="Include" />
-            <e p="SceneChange.cs" t="Include" />
-            <e p="SceneChange2_ending.cs" t="Include" />
             <e p="StatusController.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
           </e>
