@@ -22,11 +22,21 @@ public class ColliderEnter : MonoBehaviour
     [SerializeField] private ColliderEnter theColliderEnter;
     [SerializeField] private bool isPlayingAnimator;
     [SerializeField] private bool isTurningObj;
+    [SerializeField] private bool isMovingPlayer;
+    [SerializeField] private GameObject ob_player;
+    [SerializeField] private GameObject ob_parent;
     [SerializeField] private TurningObject theTurningObj;
     [SerializeField] private PlayingAnim thePlayingAnim;
 
     private void OnTriggerEnter(Collider other)
     {
+        if (theColliderEnter.isMovingPlayer)
+        {
+            if (other.CompareTag("Player"))
+            {
+                ob_player.transform.parent = ob_parent.transform;
+            }
+        }
         if (theColliderEnter.isPlayingAnimator)
         {
             if (other.CompareTag("Player"))
@@ -78,5 +88,12 @@ public class ColliderEnter : MonoBehaviour
                 theColliderEnter.thePlayingAnim.theInteractObj.SetComplete();
             }
         }
+        
+        if(theColliderEnter.isMovingPlayer)
+            if (other.CompareTag("Player"))
+            {
+                ob_player.transform.parent = null;
+            }
+        
     }
 }
