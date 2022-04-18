@@ -1,25 +1,32 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 
 public class MoveWithPlatform : MonoBehaviour
 {
     public GameObject player;
+    public GameObject fan;
+    private bool onFan = false;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
-            player.transform.parent = transform;
+            player.transform.parent = fan.transform;
+            onFan = true;
+            Debug.Log("on the fan");
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        if (other.gameObject == player)
+        if (onFan)
         {
-            player.transform.parent = null;
+            player.transform.rotation = Quaternion.Inverse(fan.transform.rotation);
         }
     }
 }
+    
