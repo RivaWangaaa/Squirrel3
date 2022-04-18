@@ -41,7 +41,7 @@ public class EnemyAttack : MonoBehaviour
             //Attack Code
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
            
-            rb.AddForce(transform.forward * 100f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
             
