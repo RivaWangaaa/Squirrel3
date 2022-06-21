@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyAttack : MonoBehaviour
 {
+    //[SerializeField] private Transform playerTargetPoint;
     [SerializeField] private Transform player;
 
     public LayerMask playerMask;
@@ -16,19 +17,24 @@ public class EnemyAttack : MonoBehaviour
     public GameObject projectile;
     
     //damage temp
-    public float tempHealth;
-    
+    //public float tempHealth;
+
+
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     
+ 
+
+    
 
     private void Update()
     {
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
+        //playerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerMask);
+        //playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerMask);
         
         AttackPlayer();
+
     }
 
     private void AttackPlayer()
@@ -43,8 +49,8 @@ public class EnemyAttack : MonoBehaviour
            
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            //takeDamage();
 
-            
             alreadyAttack = true;
             Invoke(nameof(ResetAttack), timeBetweenAttack);
         }
@@ -53,16 +59,6 @@ public class EnemyAttack : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttack = false;
-    }
-
-    public void TakeDamage(int damage)
-    {
-        //put damage function here. -> In the game we have health bar
-        
-        //this is for testing damage
-        tempHealth -= damage;
-
-        if (tempHealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
     private void DestroyEnemy()
