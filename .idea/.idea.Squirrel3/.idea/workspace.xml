@@ -5,8 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Squirrel3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Sculpture_swing1_control.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Sculpture_swing1_control.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/__Final/Final Floor1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Attacked.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestScript/TestFloorBrokeSculp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" root0="FORCE_HIGHLIGHTING" />
+<<<<<<< Updated upstream
+=======
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FE84F4A7-54DA-4A6B-B64F-CA409D40938A/a4/e79e0c6b/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A92AD44-406B-4318-9677-3A464E9EC96E/d3/d7ba31fb/Action.cs" root0="SKIP_HIGHLIGHTING" />
+>>>>>>> Stashed changes
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -45,7 +54,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UIScripts/StatusController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameMaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractObj.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/$CharacterMotor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Collider/ColliderEnter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attacked.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" />
     </changedPaths>
   </component>
@@ -59,7 +70,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="rider.run.widget.enabled.cache" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -117,7 +131,8 @@
       <workItem from="1647367069422" duration="5019000" />
       <workItem from="1648408875882" duration="9883000" />
       <workItem from="1649618440077" duration="2644000" />
-      <workItem from="1650222620832" duration="1555000" />
+      <workItem from="1650222620832" duration="5000000" />
+      <workItem from="1650826216456" duration="7112000" />
     </task>
     <servers />
   </component>

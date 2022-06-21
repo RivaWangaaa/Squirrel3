@@ -1422,6 +1422,7 @@
           <e p="Door.cs" t="Include" />
           <e p="EndingSprite.cs" t="Include" />
           <e p="Enemy" t="Include">
+            <e p="Attacked.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
           </e>
           <e p="Environment" t="Include">
@@ -1439,6 +1440,7 @@
           <e p="LevelLoader.cs" t="Include" />
           <e p="LevelLoader_forMainMenu.cs" t="Include" />
           <e p="messageClose.cs" t="Include" />
+          <e p="MoveWithPlatform.cs" t="Include" />
           <e p="Nut.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="Player.cs" t="Include" />
