@@ -7,7 +7,13 @@ using UnityEngine;
 [System.Serializable]
 public class PlayingAnim
 {
+    public bool isInteractable;
     public InteractObj theInteractObj;
+    public bool isBoolTrigger;
+    public Animator anim;
+    public string boolName;
+    public bool isAnimTrueOrFalse;
+    public bool isAnimExit;
 }
 
 [System.Serializable]
@@ -39,12 +45,23 @@ public class ColliderEnter : MonoBehaviour
         }
         if (theColliderEnter.isPlayingAnimator)
         {
-            if (other.CompareTag("Player"))
+            if (theColliderEnter.thePlayingAnim.isInteractable)
             {
-                if (!InteractObj.isActivate)
+                if (other.CompareTag("Player"))
                 {
-                    theColliderEnter.thePlayingAnim.theInteractObj.PlayAnim();
+                    if (!InteractObj.isActivate)
+                    {
+                        theColliderEnter.thePlayingAnim.theInteractObj.PlayAnim();
 
+                    }
+                }
+            }
+
+            if (theColliderEnter.thePlayingAnim.isBoolTrigger)
+            {
+                if (other.CompareTag("Player"))
+                {
+                    theColliderEnter.thePlayingAnim.anim.SetBool(theColliderEnter.thePlayingAnim.boolName,theColliderEnter.thePlayingAnim.isAnimTrueOrFalse);
                 }
             }
         }
@@ -82,12 +99,28 @@ public class ColliderEnter : MonoBehaviour
     {
         if (theColliderEnter.isPlayingAnimator)
         {
-            if (InteractObj.isActivate)
+            if (theColliderEnter.thePlayingAnim.isInteractable)
             {
-                theColliderEnter.thePlayingAnim.theInteractObj.StopAnimation();
-                theColliderEnter.thePlayingAnim.theInteractObj.SetComplete();
+                if (InteractObj.isActivate)
+                {
+                    theColliderEnter.thePlayingAnim.theInteractObj.StopAnimation();
+                    theColliderEnter.thePlayingAnim.theInteractObj.SetComplete();
+                }
+            }
+
+            if (theColliderEnter.thePlayingAnim.isAnimExit)
+            {
+                if (theColliderEnter.thePlayingAnim.isBoolTrigger)
+                {
+                    if (other.CompareTag("Player"))
+                    {
+                        theColliderEnter.thePlayingAnim.anim.SetBool(theColliderEnter.thePlayingAnim.boolName,!theColliderEnter.thePlayingAnim.isAnimTrueOrFalse);
+                    }
+                }
             }
         }
+        
+        
         
         if(theColliderEnter.isMovingPlayer)
             if (other.CompareTag("Player"))
