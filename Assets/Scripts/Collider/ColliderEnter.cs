@@ -47,12 +47,13 @@ public class ColliderEnter : MonoBehaviour
         {
             if (theColliderEnter.thePlayingAnim.isInteractable)
             {
+                Debug.Log("Player enter");
+
                 if (other.CompareTag("Player"))
                 {
                     if (!InteractObj.isActivate)
                     {
                         theColliderEnter.thePlayingAnim.theInteractObj.PlayAnim();
-
                     }
                 }
             }
