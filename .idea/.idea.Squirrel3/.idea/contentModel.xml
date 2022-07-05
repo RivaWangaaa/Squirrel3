@@ -1414,6 +1414,10 @@
         </e>
         <e p="readme.txt" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Basement" t="Include">
+            <e p="FanRotate.cs" t="Include" />
+            <e p="MoveWithPlatform.cs" t="Include" />
+          </e>
           <e p="CheckPoint.cs" t="Include" />
           <e p="Collider" t="Include">
             <e p="ColliderEnter.cs" t="Include" />
@@ -1422,6 +1426,7 @@
           <e p="Door.cs" t="Include" />
           <e p="EndingSprite.cs" t="Include" />
           <e p="Enemy" t="Include">
+            <e p="Attacked.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
           </e>
           <e p="Environment" t="Include">

@@ -21,6 +21,8 @@ public class TurningObject
 {
     public GameObject[] turnOnObj;
     public GameObject[] turnOffObj;
+    public bool isWaitingTime;
+    public float waitingTime;
 }
 
 public class ColliderEnter : MonoBehaviour
@@ -75,27 +77,46 @@ public class ColliderEnter : MonoBehaviour
                 {
                     if (theColliderEnter.theTurningObj.turnOnObj != null)
                     {
-                        for (int i = 0; i < theColliderEnter.theTurningObj.turnOnObj.Length; i++)
-                        {
-                            theColliderEnter.theTurningObj.turnOnObj[i].SetActive(true);
-                            Debug.Log("Obj turn on");
-
-                        }                    
+                        StartCoroutine(TurnOnObj());
                     }
 
                     if (theColliderEnter.theTurningObj.turnOffObj != null)
                     {
-                        for (int i = 0; i < theColliderEnter.theTurningObj.turnOffObj.Length; i++)
-                        {
-                            theColliderEnter.theTurningObj.turnOffObj[i].SetActive(false);
-
-                        }
+                        StartCoroutine(TurnOffObj());
                     }
                 }
             }
         }
     }
 
+    private IEnumerator TurnOnObj()
+    {
+        if(theColliderEnter.theTurningObj.isWaitingTime)
+        {
+            yield return new WaitForSeconds(theColliderEnter.theTurningObj.waitingTime);
+        }
+        
+        for (int i = 0; i < theColliderEnter.theTurningObj.turnOnObj.Length; i++)
+        {
+            theColliderEnter.theTurningObj.turnOnObj[i].SetActive(true);
+            Debug.Log("Obj turn on");
+        }
+    }
+
+    private IEnumerator TurnOffObj()
+    {
+        if(theColliderEnter.theTurningObj.isWaitingTime)
+        {
+            yield return new WaitForSeconds(theColliderEnter.theTurningObj.waitingTime);
+        }
+        
+        for (int i = 0; i < theColliderEnter.theTurningObj.turnOffObj.Length; i++)
+        {
+            theColliderEnter.theTurningObj.turnOffObj[i].SetActive(false);
+
+        }
+    }
+    
     private void OnTriggerExit(Collider other)
     {
         if (theColliderEnter.isPlayingAnimator)
