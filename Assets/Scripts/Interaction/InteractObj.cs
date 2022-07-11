@@ -48,7 +48,7 @@ public class InteractObj : MonoBehaviour
 
                 if (isActivate)
                 {
-                    if (isAnimtorDone())
+                    if (theInteractObj.isAnimtorDone())
                     {
                         StartCoroutine(Complete());
                     }
@@ -68,6 +68,11 @@ public class InteractObj : MonoBehaviour
         return theInteractObj.thePlayAnimation.anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1;
     }
 
+    public void CompleteAnim()
+    {
+        StartCoroutine(Complete());
+    }
+
     private IEnumerator Complete()
     {
         theInteractObj.thePlayAnimation.anim.SetBool(theInteractObj.thePlayAnimation.playAnimName, false);
@@ -80,6 +85,7 @@ public class InteractObj : MonoBehaviour
     public void StopAnimation()
     {
         theInteractObj.thePlayAnimation.anim.SetBool(theInteractObj.thePlayAnimation.playAnimName, false);
+        isActivate = false;
     }
     
 
@@ -95,7 +101,7 @@ public class InteractObj : MonoBehaviour
         isActivate = true;
         theInteractObj.thePlayAnimation.anim.SetBool(theInteractObj.thePlayAnimation.playAnimName, true);
         
-        if (isAnimtorDone())
+        if (theInteractObj.isAnimtorDone())
         {
             StartCoroutine(Complete());
         }

@@ -36,13 +36,18 @@ public class ColliderEnter : MonoBehaviour
     [SerializeField] private TurningObject theTurningObj;
     [SerializeField] private PlayingAnim thePlayingAnim;
 
+    private void Start()
+    {
+        Debug.Log("InteractObj.isactivate = " + InteractObj.isActivate);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (theColliderEnter.isMovingPlayer)
         {
             if (other.CompareTag("Player"))
             {
-                ob_player.transform.parent = ob_parent.transform;
+                theColliderEnter.ob_player.transform.parent = theColliderEnter.ob_parent.transform;
             }
         }
         if (theColliderEnter.isPlayingAnimator)
@@ -50,12 +55,15 @@ public class ColliderEnter : MonoBehaviour
             if (theColliderEnter.thePlayingAnim.isInteractable)
             {
                 Debug.Log("Player enter");
-
+                
                 if (other.CompareTag("Player"))
                 {
+                    Debug.Log("InteractObj.isactivate = " + InteractObj.isActivate);
+
                     if (!InteractObj.isActivate)
                     {
                         theColliderEnter.thePlayingAnim.theInteractObj.PlayAnim();
+                        Debug.Log("anim played");
                     }
                 }
             }
@@ -95,11 +103,14 @@ public class ColliderEnter : MonoBehaviour
         {
             yield return new WaitForSeconds(theColliderEnter.theTurningObj.waitingTime);
         }
-        
-        for (int i = 0; i < theColliderEnter.theTurningObj.turnOnObj.Length; i++)
+
+        if (theColliderEnter.theTurningObj.turnOnObj != null)
         {
-            theColliderEnter.theTurningObj.turnOnObj[i].SetActive(true);
-            Debug.Log("Obj turn on");
+            for (int i = 0; i < theColliderEnter.theTurningObj.turnOnObj.Length; i++)
+            {
+                theColliderEnter.theTurningObj.turnOnObj[i].SetActive(true);
+                Debug.Log("Obj turn on");
+            }
         }
     }
 
@@ -109,12 +120,15 @@ public class ColliderEnter : MonoBehaviour
         {
             yield return new WaitForSeconds(theColliderEnter.theTurningObj.waitingTime);
         }
-        
-        for (int i = 0; i < theColliderEnter.theTurningObj.turnOffObj.Length; i++)
-        {
-            theColliderEnter.theTurningObj.turnOffObj[i].SetActive(false);
 
+        if (theColliderEnter.theTurningObj.turnOffObj != null)
+        {
+            for (int i = 0; i < theColliderEnter.theTurningObj.turnOffObj.Length; i++)
+            {
+                theColliderEnter.theTurningObj.turnOffObj[i].SetActive(false);
+            }
         }
+        
     }
     
     private void OnTriggerExit(Collider other)
@@ -147,7 +161,7 @@ public class ColliderEnter : MonoBehaviour
         if(theColliderEnter.isMovingPlayer)
             if (other.CompareTag("Player"))
             {
-                ob_player.transform.parent = null;
+                theColliderEnter.ob_player.transform.parent = null;
             }
         
     }
