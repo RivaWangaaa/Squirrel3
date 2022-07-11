@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class Illustration : MonoBehaviour
 {
-    public int nutCollected;
-
     // Start is called before the first frame update
     void OnEnable()
     {
-        nutCollected = UIManager.NutNum;
+
     }
 
     // Update is called once per frame
@@ -28,27 +26,27 @@ public class Illustration : MonoBehaviour
     public void Click()
     {
         Debug.Log("Clicked");
-        if (UIManager.NutNum > 0)
+        if (UIManager.NutNum >= UIManager.nutClickOnce || transform.GetChild(2).gameObject.activeSelf)
         {
-            this.transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
             Debug.Log("Not enough nuts");
-            this.transform.GetChild(1).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(true);
         }
     }
 
     public void EndClick()
     {
         Debug.Log("End Clicking");
-        if (UIManager.NutNum > 0)
+        if (UIManager.NutNum >= UIManager.nutClickOnce || transform.GetChild(2).gameObject.activeSelf)
         {
-            this.transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(0).gameObject.SetActive(false);
         }
         else
         {
-            this.transform.GetChild(1).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
         }
         
         
@@ -56,13 +54,18 @@ public class Illustration : MonoBehaviour
 
     public void Collected()
     {
-        if (UIManager.NutNum > 0)
+        if (UIManager.NutNum >= UIManager.nutClickOnce && transform.GetChild(2).gameObject.activeSelf != true)  
         {
             UIManager.NutNum -= UIManager.nutClickOnce;
+            transform.GetChild(2).gameObject.SetActive(true);
         }
-        else
+        else if (transform.GetChild(2).gameObject.activeSelf)
         {
-            Debug.Log("Nut = 0");
+            Debug.Log("Clue collected");
+        }
+        else if (UIManager.NutNum <= UIManager.nutClickOnce)
+        {
+            Debug.Log("Nut not enough");
         }
         Debug.Log(UIManager.NutNum+"Nuts Left");
     }

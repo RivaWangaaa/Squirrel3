@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 8490143392126777854}
   - component: {fileID: 8490143392126777825}
   - component: {fileID: 8490143392126777826}
+  - component: {fileID: 4523017039311504570}
   m_Layer: 8
   m_Name: __Acorn_Score
   m_TagString: Untagged
@@ -272,3 +273,15 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &4523017039311504570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490143392126777824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0e2d2ddf8f6a84d8cec3c14de674a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
