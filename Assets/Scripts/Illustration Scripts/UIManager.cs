@@ -7,8 +7,9 @@ public class UIManager : MonoBehaviour
 {
 
     public UIManager UIManagerInstance;
-    public static int NutNum = 16;
+    public static int NutNum = 100;
     public static int nutClickOnce = 6;
+
 
 
     void Awake()
