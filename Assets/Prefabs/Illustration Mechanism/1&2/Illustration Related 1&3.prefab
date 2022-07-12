@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618104387491986281}
   m_Layer: 0
-  m_Name: Illustration Related 1&2
+  m_Name: Illustration Related 1&3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3259,7 +3259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3785764243611279245}
   m_Layer: 0
-  m_Name: 2-Illustration Flowchart Items
+  m_Name: 3-Flowchart Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5254,7 +5254,7 @@ GameObject:
   - component: {fileID: 3785764244124693107}
   - component: {fileID: 3785764244124693106}
   m_Layer: 5
-  m_Name: 2-Illustration Canvas
+  m_Name: 3-Illustration Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6377,7 +6377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3785764244305836923}
   m_Layer: 0
-  m_Name: 1-Illustration Flowchart Items
+  m_Name: 1-Flowchart Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8809,7 +8809,7 @@ GameObject:
   - component: {fileID: 3785764244904551388}
   - component: {fileID: 3785764244904551395}
   m_Layer: 0
-  m_Name: 2-Trigger Item (1)
+  m_Name: 3-Trigger Item (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9637,7 +9637,7 @@ GameObject:
   - component: {fileID: 3785764244991583051}
   - component: {fileID: 3785764244991583050}
   m_Layer: 0
-  m_Name: 2-Trigger Item
+  m_Name: 3-Trigger Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10937,7 +10937,7 @@ GameObject:
   - component: {fileID: 3785764245080137667}
   - component: {fileID: 3785764245080137666}
   m_Layer: 0
-  m_Name: 2-Trigger Item Temp
+  m_Name: 3-Trigger Item Temp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11556,7 +11556,7 @@ GameObject:
   - component: {fileID: 3785764245266850260}
   - component: {fileID: 3785764245266850267}
   m_Layer: 0
-  m_Name: 2-Trigger Item Temp(1)
+  m_Name: 3-Trigger Item Temp(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
