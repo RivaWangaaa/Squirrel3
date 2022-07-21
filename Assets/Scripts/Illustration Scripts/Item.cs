@@ -11,6 +11,13 @@ public class Item : MonoBehaviour
 
     public GameObject player;
 
+    private bool midEnterBool = false;
+
+    private bool endEnterBool = false;
+
+    private UIManager UIManagerInstance;
+    
+    public GameObject enterEnding;
 
     //To show the cursor when open up UI
     public void EnableFPS(bool enable)
@@ -42,6 +49,24 @@ public class Item : MonoBehaviour
             illustrationCamera.SetActive(true);
             EnableFPS(false);
         }
+        
+        //if first enter this item & this item is a third illustration item, add 1 to SecondFloorItemCount
+        if (!midEnterBool && gameObject.name.Contains("Mid"))
+        {
+            UIManager.SecondFloorItemCount += 1;
+            midEnterBool = true;
+            
+            Debug.Log("SecondFloorItemCount = " + UIManager.SecondFloorItemCount);
+        }
+        
+        if (!endEnterBool && gameObject.name.Contains("End"))
+        {
+            UIManager.SecondFloorItemCount += 1;
+            endEnterBool = true;
+           
+            Debug.Log("SecondFloorItemCount = " + UIManager.SecondFloorItemCount);
+        }
+
     }
     
     //Click on Back button, back to game
@@ -53,5 +78,15 @@ public class Item : MonoBehaviour
         illustrationCanvas.SetActive(false);
         player.SetActive(true);
         illustrationCamera.SetActive(false);
+        
+        //if it's the third illustration + there are two items in the secondFloorItems list, 
+        //trigger the flowchart of ask player if they have finished investigating
+        if (UIManager.SecondFloorItemCount == 2)
+        {
+            Debug.Log("Trigger Ending");
+            enterEnding.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        
     }
+    
 }
