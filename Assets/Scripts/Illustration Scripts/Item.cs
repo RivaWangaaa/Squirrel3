@@ -28,6 +28,9 @@ public class Item : MonoBehaviour
         {
             //Enable FPS script
             fpsScript.enabled = true;
+            player.transform.GetChild(0).GetComponent<LockMouse>().enabled = true;
+            player.GetComponent<MouseLook>().sensitivityX = 7;
+            player.transform.GetChild(0).GetComponent<MouseLook>().sensitivityY = 8;
         }
         else
         {
@@ -36,6 +39,9 @@ public class Item : MonoBehaviour
             //Unlock Mouse and make it visible
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            player.transform.GetChild(0).GetComponent<LockMouse>().enabled = false;
+            player.GetComponent<MouseLook>().sensitivityX = 0;
+            player.transform.GetChild(0).GetComponent<MouseLook>().sensitivityY = 0;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -72,12 +78,7 @@ public class Item : MonoBehaviour
     //Click on Back button, back to game
     public void Back()
     {
-        Debug.Log("Back to game");
-        player.transform.position += Vector3.forward;
-        EnableFPS(true);
-        illustrationCanvas.SetActive(false);
-        player.SetActive(true);
-        illustrationCamera.SetActive(false);
+        ReturnToGame();
         
         //if it's the third illustration + there are two items in the secondFloorItems list, 
         //trigger the flowchart of ask player if they have finished investigating
@@ -85,8 +86,19 @@ public class Item : MonoBehaviour
         {
             Debug.Log("Trigger Ending");
             enterEnding.transform.GetChild(0).gameObject.SetActive(true);
+            EnableFPS(false);
         }
-        
+
+    }
+    
+    private void ReturnToGame()
+    {
+        Debug.Log("Back to game");
+        player.transform.position += Vector3.forward;
+        EnableFPS(true);
+        illustrationCanvas.SetActive(false);
+        player.SetActive(true);
+        illustrationCamera.SetActive(false);
     }
     
 }
