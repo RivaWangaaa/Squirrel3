@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public UIManager UIManagerInstance;
     public static int NutNum = 100;
     public static int nutClickOnce = 6;
+    public static int SecondFloorItemCount = 0;
 
 
 
