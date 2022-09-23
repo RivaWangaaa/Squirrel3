@@ -6,35 +6,46 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
-    private float timeDuration = 3f;
-    private float timer;
-
+    [SerializeField] private float timeDuration;
+    [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
     [SerializeField] private TextMeshProUGUI secondMinute;
     [SerializeField] private TextMeshProUGUI separator;
     [SerializeField] private TextMeshProUGUI firstSecond;
     [SerializeField] private TextMeshProUGUI secondSecond;
 
+    private Timer theTimer;
+    private float timer;
     private float flashTimer;
     private float flashDuration = 1f;
 
+    private static float timeLeft;
+    
     // Start is called before the first frame update
     void Start()
     {
+        theTimer = this.gameObject.GetComponent<Timer>();
         ResetTimer();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (timer > 5)
         {
             timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
         }
+        
+        else if (timer <= 5 && timer != 0)
+        {
+            timer -= Time.deltaTime;
+            UpdateTimerDisplay(timer);
+            Flash();
+        }
         else
         {
-            Flash();
+            GameOver();
         }
     }
 
@@ -57,7 +68,8 @@ public class Timer : MonoBehaviour
 
     private void Flash()
     {
-        if (timer != 0)
+
+        if (timer < 0)
         {
             timer = 0;
             UpdateTimerDisplay(timer);
@@ -78,6 +90,8 @@ public class Timer : MonoBehaviour
         {
             flashTimer -= Time.deltaTime;
             SetTextDisplay(true);
+            Debug.Log("2");
+
         }
     }
 
@@ -88,6 +102,24 @@ public class Timer : MonoBehaviour
         separator.enabled = enabled;
         firstSecond.enabled = enabled;
         secondSecond.enabled = enabled;
+    }
+
+    private void GameOver()
+    {
+        if (timer != 0)
+        {
+            timer = 0;
+            UpdateTimerDisplay(timer);
+        }
+        
+        theTimer.gameOverPanel.SetActive(true);
+        theTimer.gameObject.SetActive(false);
+        Debug.Log("Game Over");
+    }
+
+    public void SaveLeftTime()
+    {
+        timeLeft = theTimer.timer;
     }
 
 }

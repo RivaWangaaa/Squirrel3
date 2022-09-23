@@ -63,6 +63,7 @@ public class ColliderEnter : MonoBehaviour
                     if (!InteractObj.isActivate)
                     {
                         theColliderEnter.thePlayingAnim.theInteractObj.PlayAnim();
+                        theColliderEnter.CheckTurnOn();
                         Debug.Log("anim played");
                     }
                 }
@@ -76,8 +77,10 @@ public class ColliderEnter : MonoBehaviour
                 }
             }
         }
-
-        if (theColliderEnter.isTurningObj)
+        
+        else if (!theColliderEnter.isPlayingAnimator)
+        {
+            if (theColliderEnter.isTurningObj)
         {
             if (other.CompareTag("Player"))
             {
@@ -93,6 +96,23 @@ public class ColliderEnter : MonoBehaviour
                         StartCoroutine(TurnOffObj());
                     }
                 }
+            }
+        }
+        }
+    }
+
+    private void CheckTurnOn()
+    {
+        if (theColliderEnter.isTurningObj)
+        {
+            if (theColliderEnter.theTurningObj.turnOnObj != null)
+            {
+                StartCoroutine(TurnOnObj());
+            }
+
+            if (theColliderEnter.theTurningObj.turnOffObj != null)
+            {
+                StartCoroutine(TurnOffObj());
             }
         }
     }
