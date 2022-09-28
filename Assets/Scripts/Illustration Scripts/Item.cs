@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -11,13 +12,16 @@ public class Item : MonoBehaviour
 
     public GameObject player;
 
-    private bool midEnterBool = false;
+    private bool midEnterBool3 = false;
 
-    private bool endEnterBool = false;
+    private bool endEnterBool3 = false;
 
     private UIManager UIManagerInstance;
     
     public GameObject enterEnding;
+
+    public GameObject enterSculptureBreak;
+
 
     //To show the cursor when open up UI
     public void EnableFPS(bool enable)
@@ -49,26 +53,30 @@ public class Item : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Item triggered");
-            
+
             illustrationCanvas.SetActive(true);
             player.SetActive(false);
             illustrationCamera.SetActive(true);
             EnableFPS(false);
         }
+
+        //Save this item's name to UIManager script so that it doesn't get changed when 'back' button
+        //calls the specific item script
+        UIManager.itemName = name;
         
         //if first enter this item & this item is a third illustration item, add 1 to SecondFloorItemCount
-        if (!midEnterBool && gameObject.name.Contains("Mid"))
+        if (!midEnterBool3 && gameObject.name.Contains("3Mid"))
         {
             UIManager.SecondFloorItemCount += 1;
-            midEnterBool = true;
+            midEnterBool3 = true;
             
             Debug.Log("SecondFloorItemCount = " + UIManager.SecondFloorItemCount);
         }
         
-        if (!endEnterBool && gameObject.name.Contains("End"))
+        if (!endEnterBool3 && gameObject.name.Contains("3End"))
         {
             UIManager.SecondFloorItemCount += 1;
-            endEnterBool = true;
+            endEnterBool3 = true;
            
             Debug.Log("SecondFloorItemCount = " + UIManager.SecondFloorItemCount);
         }
@@ -78,9 +86,21 @@ public class Item : MonoBehaviour
     //Click on Back button, back to game
     public void Back()
     {
+
         ReturnToGame();
         
-        //if it's the third illustration + there are two items in the secondFloorItems list, 
+        //When the player clicks the 'back' button of the end item of the 1st illustration,
+        //ask them if they have finished investigating the 1st illustration by triggering the according flowchart
+        if (UIManager.itemName.Contains("1End"))
+        {
+            Debug.Log("Ask if end exploring to trigger sculpture animation.");
+            enterSculptureBreak.transform.GetChild(0).gameObject.SetActive(true);
+            EnableFPS(false);
+        }
+        
+        Debug.Log(UIManager.itemName);
+            
+            //if it's the third illustration + there are two items in the secondFloorItems list, 
         //trigger the flowchart of ask player if they have finished investigating
         if (UIManager.SecondFloorItemCount == 2)
         {
@@ -99,6 +119,8 @@ public class Item : MonoBehaviour
         illustrationCanvas.SetActive(false);
         player.SetActive(true);
         illustrationCamera.SetActive(false);
+
+        enterSculptureBreak.transform.GetChild(0).gameObject.SetActive(false);
     }
     
 }
