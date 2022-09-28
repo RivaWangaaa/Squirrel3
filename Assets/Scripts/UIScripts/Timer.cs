@@ -107,7 +107,6 @@ public class Timer : MonoBehaviour
         {
             flashTimer -= Time.deltaTime;
             SetTextDisplay(true);
-            Debug.Log("2");
 
         }
     }

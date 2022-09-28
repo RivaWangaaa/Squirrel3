@@ -9,11 +9,13 @@ public class BreakSculp : MonoBehaviour
 
     [SerializeField] private float destroyTime;
     [SerializeField] private BoxCollider col;
-
+    
+    //the alarming sound
+    [SerializeField] private string alarm_Sound;
+    
     //Game Object component
     [SerializeField] private GameObject go_Sculpture;
     [SerializeField] private GameObject go_BrokenPieces;
-    [SerializeField] private GameObject alarm;
 
     public void BreakSculpture()
     {
@@ -33,7 +35,7 @@ public class BreakSculp : MonoBehaviour
     {
         if (theBreakSculpt.isAlarmRing)
         {
-            theBreakSculpt.alarm.SetActive(true);
+            SoundManager.instance.PlaySE(theBreakSculpt.alarm_Sound);
         }
     }
     
