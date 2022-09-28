@@ -34,17 +34,14 @@ public class Player : MonoBehaviour
     //transition
     public Animator transition;
     public float transitionTime = 1f;
+
+    //Timer
+    private Timer isTimer;
     
     //Audio
     // public AudioClip otherClip;
     
-   // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+   // Update is called once per frame
     void Update()
     {
         // PlayAudio();
@@ -218,6 +215,12 @@ public class Player : MonoBehaviour
         elevatorClosed.SetActive(true);
         LoadNextLevel();
         //SceneManager.LoadScene("Basement Texture 1");
+        
+        //Timer
+        if (Timer.isTimerIsOn)
+        {
+            Timer.isSceneChanging = true;
+        }
     }
 
     public static IEnumerator DelayActivation(GameObject obj)

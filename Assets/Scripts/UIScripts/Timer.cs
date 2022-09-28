@@ -5,7 +5,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-
+    [SerializeField] private bool isSecondTime;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -19,11 +19,14 @@ public class Timer : MonoBehaviour
     private float flashTimer;
     private float flashDuration = 1f;
 
-    private static float timeLeft;
+    public static float timeLeft;
+    public static bool isSceneChanging;
+    public static bool isTimerIsOn;
     
     // Start is called before the first frame update
     void Start()
     {
+        isTimerIsOn = true;
         theTimer = this.gameObject.GetComponent<Timer>();
         ResetTimer();
     }
@@ -31,27 +34,41 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 5)
+        if (!isSceneChanging)
         {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay(timer);
+            SaveLeftTime();
+
+            if (timer > 5)
+            {
+                timer -= Time.deltaTime;
+                UpdateTimerDisplay(timer);
+            }
+        
+            else if (timer <= 5 && timer != 0)
+            {
+                timer -= Time.deltaTime;
+                UpdateTimerDisplay(timer);
+                Flash();
+            }
+            else
+            {
+                GameOver();
+            }
         }
         
-        else if (timer <= 5 && timer != 0)
-        {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay(timer);
-            Flash();
-        }
-        else
-        {
-            GameOver();
-        }
     }
 
     private void ResetTimer()
     {
-        timer = timeDuration;
+        if (theTimer.isSecondTime)
+        {
+            theTimer.timer = timeLeft;
+        }
+
+        else
+        {
+            timer = timeDuration;
+        }
     }
 
     private void UpdateTimerDisplay(float time)
