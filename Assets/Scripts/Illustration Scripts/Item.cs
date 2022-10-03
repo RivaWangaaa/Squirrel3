@@ -111,7 +111,7 @@ public class Item : MonoBehaviour
 
     }
     
-    private void ReturnToGame()
+    public void ReturnToGame()
     {
         Debug.Log("Back to game");
         player.transform.position += Vector3.forward;
@@ -120,7 +120,7 @@ public class Item : MonoBehaviour
         player.SetActive(true);
         illustrationCamera.SetActive(false);
 
-        enterSculptureBreak.transform.GetChild(0).gameObject.SetActive(false);
+        //enterSculptureBreak.transform.GetChild(0).gameObject.SetActive(false);
     }
     
 }

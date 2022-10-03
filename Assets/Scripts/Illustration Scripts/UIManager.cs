@@ -11,6 +11,9 @@ public class UIManager : MonoBehaviour
     public static int nutClickOnce = 6;
     public static int SecondFloorItemCount = 0;
     public static string itemName = "none";
+    public GameObject fallingVase;
+    public GameObject itemExample;
+    public GameObject player;
 
 
 
@@ -27,8 +30,19 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
 
-   
-    
+    public void StartSculptureBreak()
+    { 
+        fallingVase.transform.GetChild(0).gameObject.SetActive(false);
+        fallingVase.transform.GetChild(1).gameObject.SetActive(true);
+        
+        itemExample.GetComponent<Item>().ReturnToGame();
+    }
+
+    public void FreezeControl()
+    {
+        itemExample.GetComponent<Item>().EnableFPS(false);
+    }
+
+
 }
