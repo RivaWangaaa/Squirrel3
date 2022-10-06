@@ -44,5 +44,10 @@ public class UIManager : MonoBehaviour
         itemExample.GetComponent<Item>().EnableFPS(false);
     }
 
+    public void OpenControl()
+    {
+        itemExample.GetComponent<Item>().EnableFPS(true);
+    }
+
 
 }
