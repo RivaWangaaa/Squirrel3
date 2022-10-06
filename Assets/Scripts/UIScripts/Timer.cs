@@ -55,7 +55,7 @@ public class Timer : MonoBehaviour
                 GameOver();
             }
         }
-        
+
     }
 
     private void ResetTimer()
@@ -68,6 +68,7 @@ public class Timer : MonoBehaviour
         else
         {
             timer = timeDuration;
+            isSceneChanging = false;
         }
     }
 
