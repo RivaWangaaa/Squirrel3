@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public GameObject itemExample;
     public GameObject player;
 
+    public GameObject introImage2;
 
 
     void Awake()
@@ -48,6 +49,12 @@ public class UIManager : MonoBehaviour
     {
         itemExample.GetComponent<Item>().EnableFPS(true);
     }
+
+    public void IntroLookAround()
+    {
+        introImage2.transform.localScale = new Vector3(1.5f, 1.5f, 0);
+    }
+    
 
 
 }
