@@ -80,8 +80,6 @@ public class Player : MonoBehaviour
         if (other.CompareTag("scenechange"))
         {
             StartCoroutine(changescene());
-            Debug.Log("Go to Next scene1");
-
         }
         
         if (other.CompareTag("Ending"))
@@ -188,7 +186,6 @@ public class Player : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        Debug.Log("Go to Next scene3");
     }
     
     public void LoadPrevLevel()
@@ -216,7 +213,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         elevatorClosed.SetActive(true);
         LoadNextLevel();
-        Debug.Log("Go to Next scene2");
 
         //SceneManager.LoadScene("Basement Texture 1");
         
@@ -224,6 +220,7 @@ public class Player : MonoBehaviour
         if (Timer.isTimerIsOn)
         {
             Timer.isSceneChanging = true;
+            Timer.isTimerIsOn = false;
         }
     }
 

@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private bool isSecondTime;
+    [SerializeField] private bool isSecondTime = false;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -22,12 +23,22 @@ public class Timer : MonoBehaviour
     public static float timeLeft;
     public static bool isSceneChanging;
     public static bool isTimerIsOn;
-    
+
+    private void Awake()
+    {
+        theTimer = this.gameObject.GetComponent<Timer>();
+        isTimerIsOn = true;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        isTimerIsOn = true;
-        theTimer = this.gameObject.GetComponent<Timer>();
+        if (!theTimer.isSecondTime)
+        {
+            timeLeft = 0;
+            isSceneChanging = false;
+        }
+        
         ResetTimer();
     }
 
@@ -62,12 +73,16 @@ public class Timer : MonoBehaviour
     {
         if (theTimer.isSecondTime)
         {
+            Debug.Log("Time Left : " + timeLeft);
             theTimer.timer = timeLeft;
+            UpdateTimerDisplay(theTimer.timer);
+            isSceneChanging = false;
         }
 
         else
         {
-            timer = timeDuration;
+            Debug.Log("isSceneChanging : " + isSceneChanging);
+            theTimer.timer = theTimer.timeDuration;
             isSceneChanging = false;
         }
     }
@@ -128,8 +143,11 @@ public class Timer : MonoBehaviour
             timer = 0;
             UpdateTimerDisplay(timer);
         }
-        
-        theTimer.gameOverPanel.SetActive(true);
+
+        if (theTimer.gameOverPanel != null)
+        {
+            theTimer.gameOverPanel.SetActive(true);
+        }
         theTimer.gameObject.SetActive(false);
         Debug.Log("Game Over");
     }
@@ -137,6 +155,7 @@ public class Timer : MonoBehaviour
     public void SaveLeftTime()
     {
         timeLeft = theTimer.timer;
+        Debug.Log("Saving times : " + theTimer.timer);
     }
 
 }
