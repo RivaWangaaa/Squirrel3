@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenControl()
     {
+        player.transform.position += Vector3.forward;
         itemExample.GetComponent<Item>().EnableFPS(true);
     }
 
