@@ -38,40 +38,13 @@ public class GameMaster : MonoBehaviour
     public GameObject keyType2by2;
     public Camera camera;
   
+    //Dead Ending
+    [SerializeField] private Transform restartPos;
+    [SerializeField] private GameObject dialogueTiggerdialogueTigger;
+    private static int savingAcornsAmount;
+    private static int savingBestAmount;
+    public static List<string> restartAcornsSave = new List<string>();
 
-
-    
-    public void SetScore(int value)
-    {
-        currentScore = value;
-        currentScoreUI.text = "Score : " + currentScore;
-        PlayerPrefs.SetInt("Current Score", currentScore);
-        if (currentScore > bestScore)
-        {
-            bestScore = currentScore;
-            bestScoreUI.text = "Best : " + bestScore;
-            PlayerPrefs.SetInt("Best Score", bestScore);
-        }
-    }
-
-    public void SetThirdSectionActive(int num)
-    {
-        thirdSectionActive = num;
-        sceneCount++;
-        PlayerPrefs.SetInt("thirdSection Active", thirdSectionActive);
-    }
-
-    public int GetThirdSectionActive()
-    {
-        return thirdSectionActive;
-    }
-    
-
-    public int GetScore()
-    {
-        return currentScore;
-    }
-    
      void Awake()
     {
        // thirdSectionActive = PlayerPrefs.GetInt("thirdSectionActive",0);
@@ -79,10 +52,6 @@ public class GameMaster : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-        }
-        else
-        { 
-
         }
 
         if (sceneCount == 0)
@@ -153,7 +122,7 @@ public class GameMaster : MonoBehaviour
             
         }
     }
-
+    
     void Start()
     {
 
@@ -166,17 +135,104 @@ public class GameMaster : MonoBehaviour
         }
         
     }
+    
+    public void SetScore(int value)
+    {
+        currentScore = value;
+        currentScoreUI.text = "Score : " + currentScore;
+        PlayerPrefs.SetInt("Current Score", currentScore);
+        if (currentScore > bestScore)
+        {
+            bestScore = currentScore;
+            bestScoreUI.text = "Best : " + bestScore;
+            PlayerPrefs.SetInt("Best Score", bestScore);
+        }
+    }
+
+    public void SetThirdSectionActive(int num)
+    {
+        thirdSectionActive = num;
+        sceneCount++;
+        PlayerPrefs.SetInt("thirdSection Active", thirdSectionActive);
+    }
+
+    public int GetThirdSectionActive()
+    {
+        return thirdSectionActive;
+    }
+    
+
+    public int GetScore()
+    {
+        return currentScore;
+    }
+    
+    
     public void SetAcorn(string acornName)
     {
         saveAcorn.Add(acornName);
     }
     
-    // Update is called once per frame
-    void Update()
+    //Time Limit Game Ending Nutsy captured 
+    private void DeadEnding()
     {
+        //reset the scene counts
+        thirdSectionActive = 0;
+        
+        //Move player to the starting point
+        StartCoroutine(ResetPlayerPos(restartPos));
+        
+        //Remembered the acorns amounts
+        bestScore = savingBestAmount;
+        currentScore = savingAcornsAmount;
+        
+        //Set Active Acorns
+        StartCoroutine(RestartAcorns());
+        
+        //Restart Dialogue
+        dialogueTiggerdialogueTigger.SetActive(true);
+
+        //Find the broken Sculptures and set active false
         
     }
     
+    
+    public void SaveAcornsAmounts()
+    {
+        savingBestAmount = bestScore;
+        savingAcornsAmount = currentScore;
+        restartAcornsSave = saveAcorn;
+    }
 
+    IEnumerator RestartAcorns()
+    {
+        saveAcorn = restartAcornsSave;
+        
+        for (int i = 0; i <= saveAcorn.Count; i++)
+        {
+            temp = GameObject.Find(saveAcorn[i]);
+            Destroy(temp.gameObject);
+        }
+        
+        yield return null;
+    }
 
+    IEnumerator ResetPlayerPos(Transform pos)
+    {
+        player.GetComponent<MouseLook>().enabled = false;
+        camera.GetComponent<MouseLook>().enabled = false;
+        camera.GetComponent<LockMouse>().enabled = false;
+        player.GetComponent<FirstPersonDrifter>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.localRotation = pos.localRotation;
+        player.transform.localPosition = pos.localPosition;
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<FirstPersonDrifter>().enabled = true;
+        camera.GetComponent<MouseLook>().enabled = true;
+        camera.GetComponent<LockMouse>().enabled = true;
+        player.GetComponent<MouseLook>().enabled = true;
+
+        yield return null;
+    }
+    
 }
