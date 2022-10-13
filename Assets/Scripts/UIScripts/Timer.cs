@@ -6,7 +6,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private bool isSecondTime = false;
+    public bool isSecondTime;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
     public static float timeLeft;
     public static bool isSceneChanging;
     public static bool isTimerIsOn;
+    public static bool isGameOver;
 
     private void Awake()
     {
@@ -33,12 +34,6 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!theTimer.isSecondTime)
-        {
-            timeLeft = 0;
-            isSceneChanging = false;
-        }
-        
         ResetTimer();
     }
 
@@ -61,6 +56,7 @@ public class Timer : MonoBehaviour
                 UpdateTimerDisplay(timer);
                 Flash();
             }
+            
             else
             {
                 GameOver();
@@ -69,8 +65,9 @@ public class Timer : MonoBehaviour
 
     }
 
-    private void ResetTimer()
+    public void ResetTimer()
     {
+
         if (theTimer.isSecondTime)
         {
             Debug.Log("Time Left : " + timeLeft);
@@ -81,9 +78,12 @@ public class Timer : MonoBehaviour
 
         else
         {
-            Debug.Log("isSceneChanging : " + isSceneChanging);
+            timeLeft = 0;
+            isSceneChanging = false;
             theTimer.timer = theTimer.timeDuration;
             isSceneChanging = false;
+            Debug.Log("isSceneChanging : " + isSceneChanging);
+
         }
     }
 
@@ -148,8 +148,9 @@ public class Timer : MonoBehaviour
         {
             theTimer.gameOverPanel.SetActive(true);
         }
+        
         theTimer.gameObject.SetActive(false);
-        Debug.Log("Game Over");
+        isGameOver = true;
     }
 
     public void SaveLeftTime()

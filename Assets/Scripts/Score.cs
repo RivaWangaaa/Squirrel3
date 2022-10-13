@@ -38,6 +38,7 @@ public class Score : MonoBehaviour
                 {
                     sm.SetAcorn(gameObject.name);
                 }
+                
                 else if (sm.thirdSectionActive == 3)
                 {
                     sm.SetAcorn(gameObject.name);
