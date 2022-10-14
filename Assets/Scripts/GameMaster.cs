@@ -48,13 +48,16 @@ public class GameMaster : MonoBehaviour
     //Dead Ending
     [Header("Dead Ending")]
     [Space(10)] 
+    [SerializeField] private Timer theTimer;
     [SerializeField] private Transform restartPos;
     [SerializeField] private GameObject dialogueTrigger;
+    [SerializeField] private GameObject deadEndingIllustration;
     [SerializeField] private string firstFloorSCE;
     [SerializeField] private Transform playerDir;
-    [SerializeField] private Timer theTimer;
+    [SerializeField] private int illustDuration;
     
     private static bool isThisDeadEnding;
+    private static bool isPause;
     private static int savingAcornsAmount;
     private static int savingBestAmount;
     public static List<string> restartAcornsSave = new List<string>();
@@ -182,14 +185,12 @@ public class GameMaster : MonoBehaviour
     {
         return thirdSectionActive;
     }
-    
 
     public int GetScore()
     {
         return currentScore;
     }
-    
-    
+
     public void SetAcorn(string acornName)
     {
         saveAcorn.Add(acornName);
@@ -212,7 +213,14 @@ public class GameMaster : MonoBehaviour
     {
         
         //Move player to the starting point
-        StartCoroutine(ResetPlayerPos(restartPos));
+        if (restartPos != null)
+        {
+            StartCoroutine(ResetPlayerPos(restartPos));
+        }
+        else
+        {
+            Debug.Log("restartPos is empty");
+        }
         
         //Remembered the acorns amounts
         bestScore = savingBestAmount;
@@ -224,12 +232,13 @@ public class GameMaster : MonoBehaviour
         //Reset Timer
         theTimer.isSecondTime = false;
         TimerReset();
+        isPause = false;
 
         //Find the broken Sculptures and set active false
 
         //Restart Dialogue
         dialogueTrigger.SetActive(true);
-        
+
         yield return null;
     }
 
@@ -243,14 +252,19 @@ public class GameMaster : MonoBehaviour
     //Show Dead Ending Event
     private IEnumerator DeadEndingEvent()
     {
+        isPause = true;
+        
         //Stop Player
+        StopPlayer();
         
         //Show illustration
+        deadEndingIllustration.SetActive(true);
         
         //WaitForSec
+        yield return new WaitForSeconds(illustDuration);
         
         //Make Player Move
-        
+
         //Move Player to the First Floor SCE
         DeadEndingFirstFloorMove();
 
@@ -289,20 +303,31 @@ public class GameMaster : MonoBehaviour
     //Put the player on the right place
     IEnumerator ResetPlayerPos(Transform pos)
     {
+        StopPlayer();
+        player.transform.localRotation = pos.localRotation;
+        player.transform.localPosition = pos.localPosition;
+        PlayPlayer();
+
+        yield return null;
+    }
+    
+    //Pasue Player
+    private void StopPlayer()
+    {
         player.GetComponent<MouseLook>().enabled = false;
         camera.GetComponent<MouseLook>().enabled = false;
         camera.GetComponent<LockMouse>().enabled = false;
         player.GetComponent<FirstPersonDrifter>().enabled = false;
         player.GetComponent<CharacterController>().enabled = false;
-        player.transform.localRotation = pos.localRotation;
-        player.transform.localPosition = pos.localPosition;
+    }
+
+    private void PlayPlayer()
+    {
         player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<FirstPersonDrifter>().enabled = true;
         camera.GetComponent<MouseLook>().enabled = true;
         camera.GetComponent<LockMouse>().enabled = true;
         player.GetComponent<MouseLook>().enabled = true;
-
-        yield return null;
     }
     
 }
