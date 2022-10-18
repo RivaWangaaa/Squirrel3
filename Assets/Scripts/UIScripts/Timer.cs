@@ -6,7 +6,6 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public bool isSecondTime;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -14,12 +13,14 @@ public class Timer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI separator;
     [SerializeField] private TextMeshProUGUI firstSecond;
     [SerializeField] private TextMeshProUGUI secondSecond;
+    [SerializeField] private GameObject[] countDownTurnOff;
 
     private Timer theTimer;
     private float timer;
     private float flashTimer;
     private float flashDuration = 1f;
 
+    public bool isSecondTime;
     public static float timeLeft;
     public static bool isSceneChanging;
     public static bool isTimerIsOn;
@@ -35,6 +36,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         ResetTimer();
+        CountDownTurnOff();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class Timer : MonoBehaviour
     {
         if (!isSceneChanging)
         {
+            StopAlarmGround.isCountDownStart = true;
             SaveLeftTime();
 
             if (timer > 5)
@@ -82,8 +85,6 @@ public class Timer : MonoBehaviour
             isSceneChanging = false;
             theTimer.timer = theTimer.timeDuration;
             isSceneChanging = false;
-            Debug.Log("isSceneChanging : " + isSceneChanging);
-
         }
     }
 
@@ -97,6 +98,15 @@ public class Timer : MonoBehaviour
         secondMinute.text = currentTime[1].ToString();
         firstSecond.text = currentTime[2].ToString();
         secondSecond.text = currentTime[3].ToString();
+    }
+    
+    //Turn Off objects while turn off
+    private void CountDownTurnOff()
+    {
+        for (int i = 0; i < countDownTurnOff.Length; i++)
+        {
+            countDownTurnOff[i].SetActive(false);
+        }
     }
 
     private void Flash()
@@ -140,6 +150,7 @@ public class Timer : MonoBehaviour
     {
         if (timer != 0)
         {
+            StopAlarmGround.isCountDownStart = false;
             timer = 0;
             UpdateTimerDisplay(timer);
         }
@@ -156,7 +167,6 @@ public class Timer : MonoBehaviour
     public void SaveLeftTime()
     {
         timeLeft = theTimer.timer;
-        Debug.Log("Saving times : " + theTimer.timer);
     }
 
 }

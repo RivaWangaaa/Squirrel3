@@ -14,6 +14,10 @@ public class GameMaster : MonoBehaviour
     //Don't destroy this objects data
     public GameObject acorn;
     
+    //Data
+    [Header("Data")] [Space(10)] 
+    [SerializeField] private SoundManager theSoundManager;
+    
     //Score
     [Header("Scores")]
     [Space(10)]
@@ -74,13 +78,22 @@ public class GameMaster : MonoBehaviour
 
         if (sceneCount == 0)
         {
-            PlayerPrefs.SetInt("thirdSection Active", 0);
-            thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
+            if (!Timer.isGameOver)
+            {
+                PlayerPrefs.SetInt("thirdSection Active", 0);
+                thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
+                Debug.Log("Player Preps get int 작동함");
+            }
         }
 
         else
         {
-            thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
+            if (!Timer.isGameOver)
+            {
+                thirdSectionActive = PlayerPrefs.GetInt("thirdSection Active", 0);
+                Debug.Log("Player Preps get int 작동함");
+
+            }
         }
         
         if (currentScoreCount == 0)
@@ -133,6 +146,7 @@ public class GameMaster : MonoBehaviour
             {
                 if (Timer.isGameOver)
                 {
+                    Debug.Log("Dead Ending SCE Recognized");
                     //First Floor Dead Ending
                     StartCoroutine(DeadEndingReset());
                 }
@@ -142,6 +156,7 @@ public class GameMaster : MonoBehaviour
     
     void Start()
     {
+        Debug.Log("thirdSectionActive : " + thirdSectionActive);
 
         bestScore = PlayerPrefs.GetInt("Best Score", 0);
         bestScoreUI.text = "Best : " + bestScore;
@@ -157,7 +172,10 @@ public class GameMaster : MonoBehaviour
     {
         if (Timer.isGameOver)
         {
-            StartCoroutine(DeadEndingSCEChange());
+            if (!isThisDeadEnding)
+            {
+                StartCoroutine(DeadEndingSCEChange());
+            }
         }
     }
 
@@ -199,9 +217,11 @@ public class GameMaster : MonoBehaviour
     //Time Limit Game Ending Nutsy captured 
     public IEnumerator DeadEndingSCEChange()
     {
+        //Dead Ending trigger on
+        isThisDeadEnding = true;
         
         //reset the scene counts
-        thirdSectionActive = 1;
+        thirdSectionActive = 0;
 
         //Stop player and show dead ending illustration
         StartCoroutine(DeadEndingEvent());
@@ -211,17 +231,13 @@ public class GameMaster : MonoBehaviour
 
     private IEnumerator DeadEndingReset()
     {
-        
+        Debug.Log("Dead Ending Reset");
         //Move player to the starting point
         if (restartPos != null)
-        {
+        { 
             StartCoroutine(ResetPlayerPos(restartPos));
         }
-        else
-        {
-            Debug.Log("restartPos is empty");
-        }
-        
+
         //Remembered the acorns amounts
         bestScore = savingBestAmount;
         currentScore = savingAcornsAmount;
@@ -230,7 +246,10 @@ public class GameMaster : MonoBehaviour
         StartCoroutine(RestartAcorns());
         
         //Reset Timer
-        theTimer.isSecondTime = false;
+        if (theTimer.isSecondTime)
+        {
+            theTimer.isSecondTime = false;
+        }
         TimerReset();
         isPause = false;
 
@@ -246,7 +265,7 @@ public class GameMaster : MonoBehaviour
     private void TimerReset()
     {
         Timer.isGameOver = false;
-        theTimer.ResetTimer();
+        //theTimer.ResetTimer();
     }
     
     //Show Dead Ending Event
@@ -257,6 +276,9 @@ public class GameMaster : MonoBehaviour
         //Stop Player
         StopPlayer();
         
+        //stop sounds
+        theSoundManager.StopAllSE();
+        
         //Show illustration
         deadEndingIllustration.SetActive(true);
         
@@ -264,6 +286,7 @@ public class GameMaster : MonoBehaviour
         yield return new WaitForSeconds(illustDuration);
         
         //Make Player Move
+        PlayPlayer();
 
         //Move Player to the First Floor SCE
         DeadEndingFirstFloorMove();
@@ -290,11 +313,14 @@ public class GameMaster : MonoBehaviour
     IEnumerator RestartAcorns()
     {
         saveAcorn = restartAcornsSave;
-        
-        for (int i = 0; i <= saveAcorn.Count; i++)
+
+        if (saveAcorn != null)
         {
-            temp = GameObject.Find(saveAcorn[i]);
-            Destroy(temp.gameObject);
+            for (int i = 0; i <= saveAcorn.Count; i++)
+            {
+                temp = GameObject.Find(saveAcorn[i]);
+                Destroy(temp.gameObject);
+            }
         }
         
         yield return null;
@@ -328,6 +354,13 @@ public class GameMaster : MonoBehaviour
         camera.GetComponent<MouseLook>().enabled = true;
         camera.GetComponent<LockMouse>().enabled = true;
         player.GetComponent<MouseLook>().enabled = true;
+    }
+    
+    //Complete and go to next sce
+    private void CompleteBasement()
+    {
+        //stop alarm ground activate
+        StopAlarmGround.isCountDownStart = false;
     }
     
 }

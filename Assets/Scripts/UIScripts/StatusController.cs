@@ -45,7 +45,6 @@ public class StatusController : MonoBehaviour
         if (currentHp - _count > 0)
         {
             currentHp -= _count;
-            Debug.Log("Current Hp : " + currentHp);
         }
         
         else
