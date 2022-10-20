@@ -19,18 +19,7 @@ public class MainMenu : MonoBehaviour
 
         rend = GetComponent<SpriteRenderer>();
         main = Resources.Load<Sprite>("main");
-
-        
         rend.sprite = main;
-        
-        // if (sceneSwitch)
-        // {
-        //     rend.sprite = intro1;
-        // }
-        
-        // if(sceneSwitch == false)
-        // {rend.sprite = basement;}
-
     }
 
     // Update is called once per frame
@@ -38,9 +27,7 @@ public class MainMenu : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
-                LoadNextLevel();
-
+            LoadNextLevel();
         }
     }
 

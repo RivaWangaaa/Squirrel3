@@ -6,7 +6,9 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public bool isSecondTime;
     [SerializeField] private GameMaster theGameMaster;
+    [SerializeField] private SoundManager theSoundManager;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -21,11 +23,11 @@ public class Timer : MonoBehaviour
     private float flashTimer;
     private float flashDuration = 1f;
 
-    public bool isSecondTime;
     public static float timeLeft;
     public static bool isSceneChanging;
     public static bool isTimerIsOn;
     public static bool isGameOver;
+    public static bool isComplete;
     public static List<string> saveSculptures = new List<string>();
 
 
@@ -45,35 +47,46 @@ public class Timer : MonoBehaviour
             theGameMaster.SaveAcornsAmounts();
             saveSculptures = BreakSculp.saveBrokenSculptures;
         }
+        else
+        {
+            theSoundManager.PlaySE("Alarm_Sound");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isSceneChanging)
+        if (!isComplete)
         {
-            StopAlarmGround.isCountDownStart = true;
-            SaveLeftTime();
+            if (!isSceneChanging)
+            {
+                StopAlarmGround.isCountDownStart = true;
+                SaveLeftTime();
 
-            if (timer > 5)
-            {
-                timer -= Time.deltaTime;
-                UpdateTimerDisplay(timer);
-            }
+                if (timer > 5)
+                {
+                    timer -= Time.deltaTime;
+                    UpdateTimerDisplay(timer);
+                }
         
-            else if (timer <= 5 && timer != 0)
-            {
-                timer -= Time.deltaTime;
-                UpdateTimerDisplay(timer);
-                Flash();
-            }
+                else if (timer <= 5 && timer != 0)
+                {
+                    timer -= Time.deltaTime;
+                    UpdateTimerDisplay(timer);
+                    Flash();
+                }
             
-            else
-            {
-                GameOver();
+                else
+                {
+                    GameOver();
+                }
             }
         }
 
+        else
+        {
+            CompleteCountDown();
+        }
     }
 
     public void ResetTimer()
@@ -175,6 +188,12 @@ public class Timer : MonoBehaviour
     public void SaveLeftTime()
     {
         timeLeft = theTimer.timer;
+    }
+
+    private void CompleteCountDown()
+    {
+        StopAlarmGround.isCountDownStart = false;
+
     }
 
 }

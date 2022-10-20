@@ -38,42 +38,7 @@ public class Player : MonoBehaviour
     //Timer
     private Timer isTimer;
     
-    //Audio
-    // public AudioClip otherClip;
-    
-   // Update is called once per frame
-    void Update()
-    {
-        // PlayAudio();
 
-
-        // if (Input.GetKey(KeyCode.W))
-        // {
-        //     transform.Translate( transform.forward * Time.deltaTime * 5f, Space.World);
-        // }
-        // else if (Input.GetKey(KeyCode.S))
-        // { 
-        //     transform.Translate( transform.forward * -Time.deltaTime * 5f, Space.World);
-        // }
-        // if (Input.GetKey(KeyCode.A))
-        // { 
-        //     transform.Translate( transform.right * -Time.deltaTime * 5f, Space.World);
-        // }
-        // else if (Input.GetKey(KeyCode.D))
-        // { 
-        //     transform.Translate( transform.right * Time.deltaTime * 5f, Space.World);
-        // }
-        // if (Input.GetKey(KeyCode.R))
-        // {
-        //     
-        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        // }
-
-
-
-    }
-    
-    
 
     private void OnTriggerEnter(Collider other)     // 충돌된 오브젝트
     {
