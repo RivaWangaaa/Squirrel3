@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
 
     public GameObject introImage2;
 
+    //change basement1_2 to false for formal version
+    //check if these flowcharts are already triggered
+    public bool basement1_2 = true;
+    public bool floor2_1 = false;
+
 
     void Awake()
     {
