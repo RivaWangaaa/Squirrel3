@@ -7,31 +7,34 @@ public class StopAlarmGround : MonoBehaviour
 {
     private Laser[] theLasers;
     private SoundManager theSoundManager;
+
+    public static bool isCountDownStart;
     
     // Start is called before the first frame update
     void Start()
     {
         theLasers = FindObjectsOfType<Laser>();
         theSoundManager = FindObjectOfType<SoundManager>();
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!isCountDownStart)
         {
-            if (theLasers != null)
+            if (other.CompareTag("Player"))
             {
-                for (int i = 0; i < theLasers.Length; i++)
+                if (theLasers != null)
                 {
-                    theLasers[i].isGround = false;
-                    theLasers[i].isActivated = false;
-                    theLasers[i].soundActivated = false;
-                    theLasers[i].lr.enabled = false;
+                    for (int i = 0; i < theLasers.Length; i++)
+                    {
+                        theLasers[i].isGround = false;
+                        theLasers[i].isActivated = false;
+                        theLasers[i].soundActivated = false;
+                        theLasers[i].lr.enabled = false;
+                    }
                 }
+                theSoundManager.StopAllSE();
             }
-            theSoundManager.StopAllSE();
         }
-
     }
 }

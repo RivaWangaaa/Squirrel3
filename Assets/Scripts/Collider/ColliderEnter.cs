@@ -35,11 +35,7 @@ public class ColliderEnter : MonoBehaviour
     [SerializeField] private GameObject ob_parent;
     [SerializeField] private TurningObject theTurningObj;
     [SerializeField] private PlayingAnim thePlayingAnim;
-
-    private void Start()
-    {
-        Debug.Log("InteractObj.isactivate = " + InteractObj.isActivate);
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {

@@ -52,8 +52,6 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Item triggered");
-
             illustrationCanvas.SetActive(true);
             player.SetActive(false);
             illustrationCamera.SetActive(true);
@@ -93,12 +91,10 @@ public class Item : MonoBehaviour
         //ask them if they have finished investigating the 1st illustration by triggering the according flowchart
         if (UIManager.itemName.Contains("1End"))
         {
-            Debug.Log("Ask if end exploring to trigger sculpture animation.");
             enterSculptureBreak.transform.GetChild(0).gameObject.SetActive(true);
             EnableFPS(false);
         }
         
-        Debug.Log(UIManager.itemName);
             
             //if it's the third illustration + there are two items in the secondFloorItems list, 
         //trigger the flowchart of ask player if they have finished investigating
@@ -113,7 +109,6 @@ public class Item : MonoBehaviour
     
     public void ReturnToGame()
     {
-        Debug.Log("Back to game");
         player.transform.position += Vector3.forward;
         EnableFPS(true);
         illustrationCanvas.SetActive(false);

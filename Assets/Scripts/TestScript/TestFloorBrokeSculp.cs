@@ -36,7 +36,6 @@ public class TestFloorBrokeSculp : MonoBehaviour
                 {
                     if (other.transform.name == sculps[i].transform.name)
                     {        
-                        Debug.Log("sculps 비지않음");
                         theBreakSculp = sculps[i].transform.GetComponent<BreakSculp>();
                         StartCoroutine(BreakSculpt(theBreakSculp, i));
                     }
@@ -48,11 +47,9 @@ public class TestFloorBrokeSculp : MonoBehaviour
     IEnumerator BreakSculpt(BreakSculp _temp, int _num)
     {
         _temp.BreakSculpture();
-        Debug.Log("broke sculpture");
         
         if (_temp.isAlarmRing)
         {
-            Debug.Log("laser울려라");
             _temp.RingAlarm();
         }
         yield return null;

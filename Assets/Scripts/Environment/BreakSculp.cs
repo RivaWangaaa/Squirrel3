@@ -16,6 +16,9 @@ public class BreakSculp : MonoBehaviour
     //Game Object component
     [SerializeField] private GameObject go_Sculpture;
     [SerializeField] private GameObject go_BrokenPieces;
+    
+    //remember broken sculptures name
+    public static List<string> saveBrokenSculptures = new List<string>();
 
     public void BreakSculpture()
     {
@@ -28,6 +31,7 @@ public class BreakSculp : MonoBehaviour
         Destroy(theBreakSculpt.go_Sculpture);
         
         theBreakSculpt.go_BrokenPieces.SetActive(true);
+        saveBrokenSculptures.Add(theBreakSculpt.name);
         Destroy(theBreakSculpt.go_BrokenPieces, destroyTime);
     }
 

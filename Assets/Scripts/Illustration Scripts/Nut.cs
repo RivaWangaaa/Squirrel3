@@ -22,7 +22,6 @@ public class Nut : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             UIManager.NutNum += 1;
-            Debug.Log("Nut collected." + "Nuts: " + UIManager.NutNum);
             this.gameObject.SetActive(false);
         }
     }
