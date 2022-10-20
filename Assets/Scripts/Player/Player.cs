@@ -38,6 +38,10 @@ public class Player : MonoBehaviour
     //Timer
     private Timer isTimer;
     
+    //Flowcharts
+    public GameObject beforeSecondFloor;
+    public GameObject secondFloor;
+    
 
 
     private void OnTriggerEnter(Collider other)     // 충돌된 오브젝트
@@ -96,6 +100,7 @@ public class Player : MonoBehaviour
             {
                 Debug.Log("Key is not right.");
             }
+            
 
 
 
@@ -144,6 +149,24 @@ public class Player : MonoBehaviour
                 // // 현재 다시 충돌된 객체를 다시 넣어준다.
                 // currentTransform = other.transform;
 
+        }
+
+        if (other.CompareTag("Stair1-1"))
+        {
+            if (UIManager.basement1_2 && UIManager.floor2_1 == false)
+            {
+                beforeSecondFloor.transform.GetChild(0).gameObject.SetActive(true);
+                UIManager.stair1_1 = true;
+            }
+        }
+        
+        if (other.CompareTag("Floor2-2"))
+        {
+            if (UIManager.floor2_1)
+            {
+                secondFloor.transform.GetChild(1).gameObject.SetActive(true);
+                UIManager.floor2_2 = true;
+            }
         }
 
     }

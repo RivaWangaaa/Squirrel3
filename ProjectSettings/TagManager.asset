@@ -22,6 +22,8 @@ TagManager:
   - Camera
   - Sculpture
   - Bullet
+  - Stair1-1
+  - Floor2-2
   layers:
   - Default
   - TransparentFX
