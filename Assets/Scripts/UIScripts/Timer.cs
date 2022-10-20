@@ -8,7 +8,6 @@ public class Timer : MonoBehaviour
 {
     public bool isSecondTime;
     [SerializeField] private GameMaster theGameMaster;
-    [SerializeField] private SoundManager theSoundManager;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -46,10 +45,6 @@ public class Timer : MonoBehaviour
         {
             theGameMaster.SaveAcornsAmounts();
             saveSculptures = BreakSculp.saveBrokenSculptures;
-        }
-        else
-        {
-            theSoundManager.PlaySE("Alarm_Sound");
         }
     }
 
@@ -193,7 +188,9 @@ public class Timer : MonoBehaviour
     private void CompleteCountDown()
     {
         StopAlarmGround.isCountDownStart = false;
-
+        ResetTimer();
+        isGameOver = false;
+        gameObject.SetActive(false);
     }
 
 }

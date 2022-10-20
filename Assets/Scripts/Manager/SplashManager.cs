@@ -14,18 +14,38 @@ public class SplashManager : MonoBehaviour
     [SerializeField] private float fadeSlowSpeed;
 
     public static bool isfinished;
+
+    public IEnumerator FadeOut(bool _isWhite, bool _isSlow)
+    {
+        Color t_Color = (_isWhite == true) ? colorWhite : colorBlack;
+        t_Color.a = 0; 
     
-    //public IEnumerator FadeOut(boo)
+        image.color = t_Color;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        while (t_Color.a < 1)
+        {
+            t_Color.a += (_isSlow == true) ? fadeSlowSpeed : fadeSpeed;
+            image.color = t_Color;
+            yield return null;
+        }
+
+        isfinished = true;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public IEnumerator FadeIn(bool _isWhite, bool _isSlow)
     {
-        
+        Color t_Color = (_isWhite == true) ? colorWhite : colorBlack;
+        t_Color.a = 1; 
+    
+        image.color = t_Color;
+
+        while (t_Color.a > 0)
+        {
+            t_Color.a -= (_isSlow == true) ? fadeSlowSpeed : fadeSpeed;
+            image.color = t_Color;
+            yield return null;
+        }
+
+        isfinished = true;
     }
 }
