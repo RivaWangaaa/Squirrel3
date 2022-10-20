@@ -15,7 +15,7 @@ public class SplashManager : MonoBehaviour
 
     public static bool isfinished;
     
-    public IEnumerator FadeOut(boo)
+    //public IEnumerator FadeOut(boo)
 
     // Start is called before the first frame update
     void Start()
