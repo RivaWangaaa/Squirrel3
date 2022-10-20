@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -59,13 +60,15 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private string firstFloorSCE;
     [SerializeField] private Transform playerDir;
     [SerializeField] private int illustDuration;
-    
+
+    private GameObject SculpTemp;
     private static bool isThisDeadEnding;
     private static bool isPause;
+    public static bool isAcornSave;
     private static int savingAcornsAmount;
     private static int savingBestAmount;
     public static List<string> restartAcornsSave = new List<string>();
-    
+
     
     void Awake()
     {
@@ -114,6 +117,7 @@ public class GameMaster : MonoBehaviour
         if (thirdSectionActive == 3)
         {
             //transform player in front of elevator
+            Debug.Log("sce number is 3");
 
             StartCoroutine(ResetPlayerPos(playerDir));
             
@@ -139,9 +143,16 @@ public class GameMaster : MonoBehaviour
             //show the message
             floorTwoMessage.SetActive(true);
         }
+        
+        else if (thirdSectionActive == 2)
+        {
+            Debug.Log("sce number is 2");
+        }
 
         else
         {
+            Debug.Log("sce number is 1 or 0");
+            
             if (isThisDeadEnding)
             {
                 if (Timer.isGameOver)
@@ -237,13 +248,16 @@ public class GameMaster : MonoBehaviour
         { 
             StartCoroutine(ResetPlayerPos(restartPos));
         }
+        
+        //acorns amount saving condition
+        isAcornSave = false;
 
         //Remembered the acorns amounts
-        bestScore = savingBestAmount;
         currentScore = savingAcornsAmount;
 
         //Set Active Acorns
         StartCoroutine(RestartAcorns());
+        ResetBrokenSculps();
         
         //Reset Timer
         if (theTimer.isSecondTime)
@@ -279,6 +293,9 @@ public class GameMaster : MonoBehaviour
         //stop sounds
         theSoundManager.StopAllSE();
         
+        //Reset the bestscore
+        bestScore = savingBestAmount;
+
         //Show illustration
         deadEndingIllustration.SetActive(true);
         
@@ -307,6 +324,7 @@ public class GameMaster : MonoBehaviour
         savingBestAmount = bestScore;
         savingAcornsAmount = currentScore;
         restartAcornsSave = saveAcorn;
+        isAcornSave = true;
     }
 
     //Acorns Save Data(destroy taken acorns)
@@ -326,6 +344,16 @@ public class GameMaster : MonoBehaviour
         yield return null;
     }
 
+    private void ResetBrokenSculps()
+    {
+        for (int i = 0; i < Timer.saveSculptures.Count; i++)
+        {
+            SculpTemp = GameObject.Find(Timer.saveSculptures[i]);
+            SculpTemp.SetActive(false);
+        }
+        
+    }
+    
     //Put the player on the right place
     IEnumerator ResetPlayerPos(Transform pos)
     {

@@ -52,8 +52,6 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Item triggered");
-
             illustrationCanvas.SetActive(true);
             player.SetActive(false);
             illustrationCamera.SetActive(true);

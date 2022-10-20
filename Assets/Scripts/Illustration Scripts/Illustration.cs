@@ -18,10 +18,11 @@ public class Illustration : MonoBehaviour
         
     }
 
+    /*
     public void Hover()
     {
         Debug.Log("Hovering");
-    }
+    }*/
 
     public void Click()
     {

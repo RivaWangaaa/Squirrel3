@@ -6,6 +6,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField] private GameMaster theGameMaster;
     [SerializeField] private float timeDuration;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI firstMinute;
@@ -25,6 +26,8 @@ public class Timer : MonoBehaviour
     public static bool isSceneChanging;
     public static bool isTimerIsOn;
     public static bool isGameOver;
+    public static List<string> saveSculptures = new List<string>();
+
 
     private void Awake()
     {
@@ -37,6 +40,11 @@ public class Timer : MonoBehaviour
     {
         ResetTimer();
         CountDownTurnOff();
+        if (!GameMaster.isAcornSave)
+        {
+            theGameMaster.SaveAcornsAmounts();
+            saveSculptures = BreakSculp.saveBrokenSculptures;
+        }
     }
 
     // Update is called once per frame
