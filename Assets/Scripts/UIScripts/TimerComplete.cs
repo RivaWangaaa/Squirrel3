@@ -20,6 +20,10 @@ public class TimerComplete : MonoBehaviour
     
     [SerializeField] private GameObject f2_key;
     [SerializeField] private GameObject openElevator;
+    
+    //Flowchart
+    [field: Tooltip("Flowchart empty parent object in the basement scene")]
+    [SerializeField] private GameObject basementFlowchartObject;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,5 +40,8 @@ public class TimerComplete : MonoBehaviour
         Debug.Log("Player is here!");
         f2_key.SetActive(true);
         openElevator.SetActive(true);
+        
+        //Yanxi: Trigger flowchart Basement1-2
+        basementFlowchartObject.transform.GetChild(1).gameObject.SetActive(true);
     }
 }

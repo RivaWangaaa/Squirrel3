@@ -24,6 +24,7 @@ TagManager:
   - Bullet
   - Stair1-1
   - Floor2-2
+  - Basement1-1
   layers:
   - Default
   - TransparentFX
