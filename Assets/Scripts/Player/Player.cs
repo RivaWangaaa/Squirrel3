@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
@@ -39,8 +40,10 @@ public class Player : MonoBehaviour
     private Timer isTimer;
     
     //Flowcharts
-    public GameObject beforeSecondFloor;
-    public GameObject secondFloor;
+    public GameObject beforeSecondFloorFlowchartObject;
+    public GameObject secondFloorFlowchartObject;
+    [field: Tooltip("Flowchart empty parent object in the basement scene")]
+    public GameObject basementFlowchartObject;
     
 
 
@@ -151,11 +154,12 @@ public class Player : MonoBehaviour
 
         }
 
+        //Trigger routine dialogues
         if (other.CompareTag("Stair1-1"))
         {
             if (UIManager.basement1_2 && UIManager.floor2_1 == false)
             {
-                beforeSecondFloor.transform.GetChild(0).gameObject.SetActive(true);
+                beforeSecondFloorFlowchartObject.transform.GetChild(0).gameObject.SetActive(true);
                 UIManager.stair1_1 = true;
             }
         }
@@ -164,9 +168,14 @@ public class Player : MonoBehaviour
         {
             if (UIManager.floor2_1)
             {
-                secondFloor.transform.GetChild(1).gameObject.SetActive(true);
+                secondFloorFlowchartObject.transform.GetChild(1).gameObject.SetActive(true);
                 UIManager.floor2_2 = true;
             }
+        }
+        
+        if (other.CompareTag("Basement1-1"))
+        {
+            basementFlowchartObject.transform.GetChild(0).gameObject.SetActive(true);
         }
 
     }
