@@ -20,8 +20,8 @@ public class TimerComplete : MonoBehaviour
     
     [SerializeField] private GameObject f2_key;
     [SerializeField] private GameObject openElevator;
-    
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Player"))
         {
@@ -33,6 +33,7 @@ public class TimerComplete : MonoBehaviour
 
     private void Reward()
     {
+        Debug.Log("Player is here!");
         f2_key.SetActive(true);
         openElevator.SetActive(true);
     }

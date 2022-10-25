@@ -1437,6 +1437,7 @@
             <e p="CheckPoint.cs" t="Include" />
             <e p="Door.cs" t="Include" />
             <e p="Failed.cs" t="Include" />
+            <e p="InteractionDoor.cs" t="Include" />
             <e p="InteractObj.cs" t="Include" />
             <e p="Key.cs" t="Include" />
             <e p="Laser.cs" t="Include" />
@@ -1449,6 +1450,7 @@
             <e p="GameMaster.cs" t="Include" />
             <e p="SoundManager.cs" t="Include" />
             <e p="SplashManager.cs" t="Include" />
+            <e p="TransferManager.cs" t="Include" />
           </e>
           <e p="Movement" t="Include">
             <e p="FanRotate.cs" t="Include" />

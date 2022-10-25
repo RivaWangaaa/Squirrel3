@@ -177,7 +177,7 @@ public class GameMaster : MonoBehaviour
         {
             StartCoroutine(Player.DelayActivation(elevatoropen));
         }
-        
+
     }
 
     private void Update()
@@ -264,6 +264,7 @@ public class GameMaster : MonoBehaviour
         if (theTimer.isSecondTime)
         {
             theTimer.isSecondTime = false;
+            Debug.Log("thsi is second");
         }
         TimerReset();
         isPause = false;
