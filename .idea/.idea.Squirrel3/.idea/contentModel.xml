@@ -1413,19 +1413,28 @@
           </e>
         </e>
         <e p="readme.txt" t="Include" />
+        <e p="Saves" t="Include">
+          <e p="SaveFile.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Collider" t="Include">
             <e p="ColliderEnter.cs" t="Include" />
             <e p="Read.cs" t="Include" />
             <e p="TriggerTest.cs" t="Include" />
           </e>
+          <e p="Data" t="Include">
+            <e p="SaveAndLoad.cs" t="Include" />
+            <e p="SceneCountManager.cs" t="Include" />
+          </e>
           <e p="Enemy" t="Include">
             <e p="Attacked.cs" t="Include" />
             <e p="EnemyAttack.cs" t="Include" />
           </e>
           <e p="etc" t="Include">
+            <e p="DontDestroy.cs" t="Include" />
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelLoader_forMainMenu.cs" t="Include" />
+            <e p="LigtingController.cs" t="Include" />
           </e>
           <e p="Illustration Scripts" t="Include">
             <e p="Illustration.cs" t="Include" />
@@ -1444,6 +1453,7 @@
             <e p="messageClose.cs" t="Include" />
             <e p="Score.cs" t="Include" />
             <e p="SecMessage.cs" t="Include" />
+            <e p="SoundTrigger.cs" t="Include" />
             <e p="thirdKey.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
