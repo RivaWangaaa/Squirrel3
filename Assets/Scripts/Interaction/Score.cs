@@ -34,12 +34,12 @@ public class Score : MonoBehaviour
             {
                 sm.SetScore(sm.GetScore() - 1);
 
-                if (sm.thirdSectionActive == 1)
+                if (SceneCountManager.sceneCounts == 1)
                 {
                     sm.SetAcorn(gameObject.name);
                 }
                 
-                else if (sm.thirdSectionActive == 3)
+                else if (SceneCountManager.sceneCounts == 3)
                 {
                     sm.SetAcorn(gameObject.name);
                 }
@@ -61,7 +61,7 @@ public class Score : MonoBehaviour
             {
                 sm.SetScore(sm.GetScore() + 1);
 
-                if (sm.thirdSectionActive == 1)
+                if (SceneCountManager.sceneCounts == 1)
                 {
                     sm.SetAcorn(gameObject.name);
                 }

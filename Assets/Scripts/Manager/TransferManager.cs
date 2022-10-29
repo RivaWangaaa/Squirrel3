@@ -22,6 +22,15 @@ public class TransferManager : MonoBehaviour
         yield return new WaitUntil(() => SplashManager.isfinished);
         SceneManager.LoadScene(p_SceneName);
     }
+    
+    public IEnumerator TransferbyNum(int _num)
+    {
+        theUI.SetActive(false);
+        SplashManager.isfinished = false;
+        StartCoroutine(theSplashManager.FadeOut(false, true));
+        yield return new WaitUntil(() => SplashManager.isfinished);
+        SceneManager.LoadScene(_num);
+    }
 
     public IEnumerator Done()
     {

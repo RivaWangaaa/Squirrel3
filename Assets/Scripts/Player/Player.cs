@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
 
 
     //door objects
-    public GameObject elevatorClosed;
+    public GameObject elevatorOpen;
     public GameObject floorTwoClosed;
     public GameObject floorTwoOpen;
 
@@ -49,10 +49,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)     // 충돌된 오브젝트
     {
-        if (other.CompareTag("scenechange"))
+        /*if (other.CompareTag("scenechange"))
         {
             StartCoroutine(changescene());
-        }
+        }*/
         
         if (other.CompareTag("Ending"))
         {
@@ -72,14 +72,12 @@ public class Player : MonoBehaviour
             // 해당 문과 열쇠가 맞다면
             else if (currentTransform.GetComponent<Key>().keyType == other.GetComponent<Door>().doorType)
             {
-                //open the Floor1 elevator
-                Debug.Log("Door is open");
                 if (other.GetComponent<Door>().doorType == 1)
                 {
-                    elevatorClosed.SetActive(false);
+                    elevatorOpen.SetActive(false);
                 }
-                
-                else if (other.GetComponent<Door>().doorType == 2)
+
+                if (other.GetComponent<Door>().doorType == 2)
                 {
                     LoadPrevLevel();
                 }
@@ -181,8 +179,11 @@ public class Player : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //=SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        transition.SetTrigger("Start");
+        StartCoroutine(FindObjectOfType<TransferManager>().TransferbyNum(SceneManager.GetActiveScene().buildIndex + 1));
+
     }
     
     public void LoadPrevLevel()
@@ -208,7 +209,6 @@ public class Player : MonoBehaviour
     IEnumerator changescene()
     {
         yield return new WaitForSeconds(transitionTime);
-        elevatorClosed.SetActive(true);
         LoadNextLevel();
 
         //SceneManager.LoadScene("Basement Texture 1");

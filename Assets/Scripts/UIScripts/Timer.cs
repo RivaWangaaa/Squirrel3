@@ -34,6 +34,16 @@ public class Timer : MonoBehaviour
     {
         theTimer = this.gameObject.GetComponent<Timer>();
         isTimerIsOn = true;
+        Debug.Log(GameMaster.isAcornSave);
+
+        if (!GameMaster.isAcornSave)
+        {
+            if (!theTimer.isSecondTime)
+            {
+                StartCoroutine(theGameMaster.SaveAcornsAmounts());
+                saveSculptures = BreakSculp.saveBrokenSculptures;
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -41,11 +51,7 @@ public class Timer : MonoBehaviour
     {
         ResetTimer();
         CountDownTurnOff();
-        if (!GameMaster.isAcornSave)
-        {
-            theGameMaster.SaveAcornsAmounts();
-            saveSculptures = BreakSculp.saveBrokenSculptures;
-        }
+
     }
 
     // Update is called once per frame
@@ -89,7 +95,6 @@ public class Timer : MonoBehaviour
 
         if (theTimer.isSecondTime)
         {
-            Debug.Log("Time Left : " + timeLeft);
             theTimer.timer = timeLeft;
             UpdateTimerDisplay(theTimer.timer);
             isSceneChanging = false;

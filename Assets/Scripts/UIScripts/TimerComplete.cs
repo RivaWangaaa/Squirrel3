@@ -11,7 +11,6 @@ public class TimerComplete : MonoBehaviour
     [Header("Data")] 
     [Space(10)] 
     
-    [SerializeField] private Timer theTimer;
     [SerializeField] private SoundManager theSoundManager;
 
     //Reward
@@ -40,7 +39,7 @@ public class TimerComplete : MonoBehaviour
         Debug.Log("Player is here!");
         f2_key.SetActive(true);
         openElevator.SetActive(true);
-        
+
         //Yanxi: Trigger flowchart Basement1-2
         basementFlowchartObject.transform.GetChild(1).gameObject.SetActive(true);
     }
