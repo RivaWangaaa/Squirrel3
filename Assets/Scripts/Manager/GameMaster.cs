@@ -301,21 +301,7 @@ public class GameMaster : MonoBehaviour
     {
         if (restartAcornsSave != null)
         {
-            Debug.Log("restart is not empty");
-            Debug.Log(restartAcornsSave.Count);
-            Debug.Log(saveAcorn.Count);
-            for (int i = 0; i < saveAcorn.Count; i++)
-            {
-                if (restartAcornsSave[i] == null)
-                {
-                    saveAcorn[i] = null;
-                }
-                else
-                {
-                    saveAcorn[i] = restartAcornsSave[i];   
-                }
-                Debug.Log(saveAcorn[i]);
-            }
+            theSaveAndLoad.LoadData();
             
             for (int i = 0; i < saveAcorn.Count; i++)
             {

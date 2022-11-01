@@ -32,7 +32,14 @@ public class SaveAndLoad : MonoBehaviour
 
     public void SaveData()
     {
+        //acorns save
         saveData.restartAcornsSave = GameMaster.saveAcorn;
+        
+        //scene save(if need)
+        
+        //player position save(if need)
+        
+        //save the info
         string json = JsonUtility.ToJson(saveData);
         File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
         
@@ -42,6 +49,17 @@ public class SaveAndLoad : MonoBehaviour
 
     public void LoadData()
     {
-        
+        if (File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME))
+        {
+            string loadJson = File.ReadAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
+            saveData = JsonUtility.FromJson<SaveData>(loadJson);
+
+            GameMaster.saveAcorn = saveData.restartAcornsSave;
+            Debug.Log("Load Complete");
+        }
+        else
+        {
+            Debug.Log("There is no save file");
+        }
     }
 }
