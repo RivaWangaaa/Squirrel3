@@ -32,8 +32,6 @@ public class GameMaster : MonoBehaviour
     //public int thirdSectionActive;
     //private static int sceneCount;
     public static List<string> saveAcorn = new List<string>();
-    [SerializeField] private List<string> show = new List<string>();
-    [SerializeField] private List<string> show2 = new List<string>();
     private GameObject temp;
     public GameObject floorTwoMessage;
     public GameObject player;
@@ -67,13 +65,14 @@ public class GameMaster : MonoBehaviour
     public static bool isAcornSave;
     private static int savingAcornsAmount;
     private static int savingBestAmount;
-    public static List<string> restartAcornsSave = new List<string>();
+    //public static List<string> restartAcornsSave = new List<string>();
 
     
     void Awake()
     {
         if (currentScoreCount == 0)
         {
+            isAcornSave = false;
             currentScore = 0;
             currentScoreUI.text = "Score : " + currentScore;
             currentScoreCount++;
@@ -134,10 +133,8 @@ public class GameMaster : MonoBehaviour
     
     void Start()
     {
-        theSaveAndLoad = GetComponent<SaveAndLoad>();
-        Debug.Log("Save and load : " + theSaveAndLoad.gameObject.name);
-        Debug.Log("Scene counts : " + SceneCountManager.sceneCounts);
-        
+        theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
+
         bestScore = PlayerPrefs.GetInt("Best Score", 0);
         bestScoreUI.text = "Best : " + bestScore;
         
@@ -150,9 +147,6 @@ public class GameMaster : MonoBehaviour
 
     private void Update()
     {
-        show = restartAcornsSave;
-        show2 = saveAcorn;
-        
         if (Timer.isGameOver)
         {
             if (!isThisDeadEnding)
@@ -299,21 +293,24 @@ public class GameMaster : MonoBehaviour
     //Acorns Save Data(destroy taken acorns)
     private IEnumerator RestartAcorns()
     {
-        if (restartAcornsSave != null)
+        theSaveAndLoad = FindObjectOfType<SaveAndLoad>();
+        theSaveAndLoad.LoadData();
+
+        yield return new WaitForSeconds(0.5f);
+        if (saveAcorn != null)
         {
-            theSaveAndLoad.LoadData();
-            
             for (int i = 0; i < saveAcorn.Count; i++)
             {
-                Debug.Log(saveAcorn[i]);
+                Debug.Log(theSaveAndLoad.saveData.restartAcornsSave[i]);
+                saveAcorn[i] = theSaveAndLoad.saveData.restartAcornsSave[i];
                 temp = GameObject.Find(saveAcorn[i]);
-                Destroy(temp.gameObject); 
-            }
+                Destroy(temp.gameObject);
+            } 
         }
-
-
-
-        yield return null;
+        else
+        {
+            Debug.Log("saveAcron is empty");
+        }
     }
 
     private IEnumerator ResetBrokenSculps()

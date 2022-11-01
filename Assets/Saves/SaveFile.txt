@@ -1,1 +1,1 @@
-{"sceneCount":0,"restartAcornsSave":["__Acorn_Score (39)"]}
+{"sceneCount":0,"restartAcornsSave":[]}

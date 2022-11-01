@@ -14,16 +14,14 @@ public class SaveData
 
 public class SaveAndLoad : MonoBehaviour
 {
-    private SaveData saveData = new SaveData();
-    private GameMaster theGameMaster;
+    public SaveData saveData = new SaveData();
 
     private string SAVE_DATA_DIRECTORY;
     private string SAVE_FILENAME = "/SaveFile.txt";
-
+    
     private void Start()
     {
         SAVE_DATA_DIRECTORY = Application.dataPath + "/Saves/";
-        theGameMaster = FindObjectOfType<GameMaster>();
         if (!Directory.Exists(SAVE_DATA_DIRECTORY))
         {
             Directory.CreateDirectory(SAVE_DATA_DIRECTORY);
@@ -49,6 +47,14 @@ public class SaveAndLoad : MonoBehaviour
 
     public void LoadData()
     {
+        
+        SAVE_DATA_DIRECTORY = Application.dataPath + "/Saves/";
+        if (!Directory.Exists(SAVE_DATA_DIRECTORY))
+        {
+            Directory.CreateDirectory(SAVE_DATA_DIRECTORY);
+        }
+        
+        Debug.Log("Starting load data");
         if (File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME))
         {
             string loadJson = File.ReadAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME);
@@ -58,8 +64,19 @@ public class SaveAndLoad : MonoBehaviour
             Debug.Log("Load Complete");
         }
         else
+        { 
+            Debug.Log("There is no load data");
+        }
+    }
+    
+
+    public void ResetData()
+    {
+        if (File.Exists(SAVE_DATA_DIRECTORY + SAVE_FILENAME))
         {
-            Debug.Log("There is no save file");
+            saveData.restartAcornsSave.Clear();
+            string json = JsonUtility.ToJson(saveData);
+            File.WriteAllText(SAVE_DATA_DIRECTORY + SAVE_FILENAME, json);
         }
     }
 }
