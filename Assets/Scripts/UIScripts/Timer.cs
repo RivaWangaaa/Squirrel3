@@ -27,7 +27,6 @@ public class Timer : MonoBehaviour
     public static bool isTimerIsOn;
     public static bool isGameOver;
     public static bool isComplete;
-    public static List<string> saveSculptures = new List<string>();
 
 
     private void Awake()
@@ -41,7 +40,6 @@ public class Timer : MonoBehaviour
             if (!theTimer.isSecondTime)
             {
                 StartCoroutine(theGameMaster.SaveAcornsAmounts());
-                saveSculptures = BreakSculp.saveBrokenSculptures;
             }
         }
     }

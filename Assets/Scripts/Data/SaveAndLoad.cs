@@ -9,6 +9,7 @@ public class SaveData
 {
     public int sceneCount;
     public List<string> restartAcornsSave = new List<string>();
+    public List<string> restartSculptureSave = new List<string>();
 }
 
 
@@ -32,6 +33,9 @@ public class SaveAndLoad : MonoBehaviour
     {
         //acorns save
         saveData.restartAcornsSave = GameMaster.saveAcorn;
+        
+        //save sculptures
+        saveData.restartSculptureSave = BreakSculp.saveBrokenSculptures;
         
         //scene save(if need)
         
@@ -61,6 +65,7 @@ public class SaveAndLoad : MonoBehaviour
             saveData = JsonUtility.FromJson<SaveData>(loadJson);
 
             GameMaster.saveAcorn = saveData.restartAcornsSave;
+            BreakSculp.saveBrokenSculptures = saveData.restartSculptureSave;
             Debug.Log("Load Complete");
         }
         else

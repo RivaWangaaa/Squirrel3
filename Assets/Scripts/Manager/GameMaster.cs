@@ -65,7 +65,6 @@ public class GameMaster : MonoBehaviour
     public static bool isAcornSave;
     private static int savingAcornsAmount;
     private static int savingBestAmount;
-    //public static List<string> restartAcornsSave = new List<string>();
 
     
     void Awake()
@@ -210,7 +209,9 @@ public class GameMaster : MonoBehaviour
 
         //Set Active Acorns
         StartCoroutine(RestartAcorns());
+        
         //StartCoroutine(ResetBrokenSculps());
+        StartCoroutine(ResetBrokenSculps());
         
         //Reset Timer
         if (theTimer.isSecondTime)
@@ -315,12 +316,12 @@ public class GameMaster : MonoBehaviour
 
     private IEnumerator ResetBrokenSculps()
     {
-        if (Timer.saveSculptures != null)
+        if (BreakSculp.saveBrokenSculptures != null)
         {
-            Debug.Log(Timer.saveSculptures.Count);
-            for (int i = 0; i < Timer.saveSculptures.Count; i++)
+            Debug.Log(BreakSculp.saveBrokenSculptures.Count);
+            for (int i = 0; i < BreakSculp.saveBrokenSculptures.Count; i++)
             {
-                SculpTemp = GameObject.Find(Timer.saveSculptures[i]);
+                SculpTemp = GameObject.Find(BreakSculp.saveBrokenSculptures[i]);
                 yield return new WaitForSeconds(0.1f);
                 SculpTemp.SetActive(false);
             }
